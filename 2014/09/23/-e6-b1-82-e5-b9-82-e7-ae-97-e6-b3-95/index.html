@@ -1,398 +1,299 @@
-/*
-
-
-	|Globals
-
-*/
-  body {
-    -webkit-transition: opacity .25s ease-in;
-    transition: opacity .25s ease-in;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    ::selection {
-      color: #f9f9f9; 
-      background: #222;
-    }
-  } 
-  .page-loading {
-    opacity: .3;
-  }
-
-  #page-header{
-    margin-bottom: 4.5em;
-  }
-
-  #masthead{
-    margin: 2rem auto;
-    padding: 0 1rem 0 1rem;
-    overflow: auto;
-    max-width: 800px;
-  }
-
-  #site-title{
-    font-size: 1.5em;
-    float: left;
-    margin-right: 1.5rem;
-  }
-
-  #site-title a{
-    border-bottom: 4px solid #eee;
-    -webkit-transition: border-color 0.25s ease-in;
-    -moz-transition: border-color 0.25s ease-in;
-    -o-transition: border-color 0.25s ease-in;
-    transition: border-color  0.25s ease-in;
-  }
-  #site-title a:hover{
-    border-color: @light-gray;
-  }
-
-  #site-slogan{
-    font-size: 0.75em;
-    border-left: solid 1px @border-color;
-    padding-left: 1.5rem;
-    margin-top: 0.85em;
-    float: left;
-    line-height: 1.75;
-  }
-
-  #content{
-    clear: both;
-    margin: 0 auto;
-    min-height: 500px;
-  }
-
-  #content header{
-    font-size: 1.5rem;
-    margin: 4rem auto;
-    position: relative;
-    height: 6rem;
-    text-align: center;
-    max-width: 650px;
-    border-bottom: #dddddd solid 1px;
-  }
-
-  .article-list li{
-    list-style-type: none;
-    margin-bottom: 1.5em;
-    margin-top: 1.5em;
-  }
-
-  .article-list {
-
-    h2, h3{
-      font-size: 120%;
-    }
-
-  }
-
-  article .meta, .article-list .meta {
-    margin-bottom: 2.5em;
-    font-size: 0.75em;
-    line-height: 1.8;
-    text-align: center;
-    word-spacing: 5px;
-		color: #777;
-  }
-
-  #article-subtitle {
-    background: #fbfbfa;
-    padding: 16px;
-    border: 1px solid #eee;
-    text-align: center;
-    font-size: 85%;
-    margin-bottom: 2.5rem;
-  }
-
-  .article-list .meta{
-    margin-top: -0.75em;
-    text-align: left;
-    word-spacing: 3px;
-  }
-
-  .article-list h2{
-    margin-top: -1.6em;
-    margin-bottom: .6em;
-  }
-
-  #article-list-pagination{
-    margin: 4rem auto;
-    position: relative;
-    height: 6rem;
-    font-size: 0.75em;
-    text-align: center;
-    padding: 2rem;
-    max-width: 650px;
-    border-top: #dddddd solid 1px;
-  }
-
-
-  #content article{
-    padding: 0 1rem 0 1rem;
-    max-width: 674px;
-    margin: 0 auto;
-    position: relative;
-    color: @basic-black;
-  }
-
-  article img{
-    max-width: 100%;
-  }
-
-
-
-  figure[class*="lang"] {
-    margin-bottom: 1.5em;
-  }
-
-  figure[class*="lang"] table,
-  figure[class*="lang"] pre {
-    width: 100%;
-    border: solid 0.05em @code-border;
-    display: block;
-    overflow: auto;
-    background: @code-background;
-  }
-
-  figure[class*="lang"] pre{
-    padding: 0 6px;
-  }
-
-  figure[class*="lang"] table pre{
-    margin-bottom: 0;
-  }
-
-  td.gutter {
-    width: 30px;
-    padding: 0 4px;
-    background: @code-background;
-    border-right: solid 1px @code-border;
-    text-align: right;
-  }
-
-  td.code {
-    width: 100%;
-    padding: 0 6px;
-    background: @code-background;
-  }
-
-  #article-pagination{
-    margin: 4rem auto;
-    position: relative;
-    height: 6rem;
-    font-size: 0.75em;
-    text-align: center;
-    padding-top: 2rem;
-    max-width: 650px;
-    border-top: @border-gray solid 1px;
-  }
-
-  #article-pagination a{
-    top: 50%;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  #article-pagination .prev{
-
-  }
-
-  #article-pagination .next{
-
-  }
-
-  #page-footer{
-    width: 100%;
-    padding: 0.65rem 0 3rem;
-    background: @light-white;
-    border-top: 0.1rem solid @border-gray;
-    margin-top: 7.5rem;
-  }
-
-
-  #page-footer section{
-    text-align: center;
-    font-size: 0.75em;
-    overflow: auto;
-  }
-
-  #footer-menu ul{
-    list-style-type: none;
-    float: right;
-  }
-
-  #footer-menu ul li{
-    text-transform: uppercase;
-    display: inline-block;
-    margin-right: 1rem;
-  }
-
-  #footer-menu ul li a{
-    border-bottom: 4px solid transparent;
-    -webkit-transition: border-color 0.25s ease-in;
-    -moz-transition: border-color 0.25s ease-in;
-    -o-transition: border-color 0.25s ease-in;
-    transition: border-color  0.25s ease-in;
-  }
-  #footer-menu ul li a:hover{
-    border-color: @light-gray;
-  }
-
-
-/*
-
-
-  |Media Queries
-
-*/
-
-  @media only screen and (max-width: 560px) {
-
-    #site-title {
-      // width: 90%;
-      margin: 1em auto;
-      text-align: center;
-      float: none;
-    }
-
-    #footer-menu {
-      text-align: center;
-      ul {
-        float: none;
-      }
-    }
-
-    #site-slogan {
-      display: none;
-    }
-
-    #content{
-      article,
-      header {
-        // width: 90%;
-        margin: 0 auto;
-      }
-    }
-
-    article .meta {
-      margin-bottom: 1.8em;
-      font-size: 0.625em;
-      line-height: 1.8;
-    }
-
-    #article-list-pagination,
-    #article-pagination {
-      // width: 90%;
-      // margin: 0 auto;
-      // overflow: auto;
-
-      a {
-        position: relative;
-        // display: block;
-        // float: left;
-        clear: both;
-      }
-    }
-
-    #page-footer {
-      margin-top: 4.5rem;
-    }
-
-    #page-footer section {
-      width: 90%;
-      font-size: 0.75rem;
-      margin: 0 auto;
-    }
-
-  }
-
-  @media only screen and (min-width: 561px) and (max-width: 1080px) {
-
-    #masthead{
-      width: 90%;
-      margin: 3em auto 0;
-    }
-
-    #content{
-      article,
-      header {
-        width: 90%;
-        margin: 0 auto;
-      }
-    }
-
-    #page-footer section{
-      width: 90%;
-      margin: 0 auto;
-    }
-
-  }
-
-/*
-    Disqus css
-*/
-    #disqus_thread{
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1rem 0 1rem;
-    }
-
-/*
-    Back to top button css
-*/
-
-/*
-    index page css
-*/
-  #index-title {
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-    max-width: 650px;
-    border-bottom: #dddddd solid 1px;
-    padding-bottom: .5rem;
-    text-transform: uppercase;
-  }
-
-  .category-list {
-    margin: 0 auto;
-    display: block;
-    max-width: 650px;
-  }
-
-  .category-list-item {
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>求幂算法的延伸运用 | 斯是陋室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="求幂算法这篇日志我想展示一个非常基本的用以幂次计算的思路，借助这个思路我们可以更好理解一些抽象的概念，譬如半群（Semigroup）和含幺半群（Monoids）。
+幂次计算中有一个有名的算法（即计算如： Xˆn ），即Donald Knuth在《计算机程序艺术》（ TAOCP ）所曾提到的那个算法。接下来我们先聊聊这个算法。
+最直白的想法就是把X乘上n遍，当然有个算法要比这个快得多，这个算法通常被">
+<meta property="og:type" content="article">
+<meta property="og:title" content="求幂算法的延伸运用">
+<meta property="og:url" content="http://yoursite.com/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/index.html">
+<meta property="og:site_name" content="斯是陋室">
+<meta property="og:description" content="求幂算法这篇日志我想展示一个非常基本的用以幂次计算的思路，借助这个思路我们可以更好理解一些抽象的概念，譬如半群（Semigroup）和含幺半群（Monoids）。
+幂次计算中有一个有名的算法（即计算如： Xˆn ），即Donald Knuth在《计算机程序艺术》（ TAOCP ）所曾提到的那个算法。接下来我们先聊聊这个算法。
+最直白的想法就是把X乘上n遍，当然有个算法要比这个快得多，这个算法通常被">
+<meta property="og:updated_time" content="2015-02-02T04:16:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="求幂算法的延伸运用">
+<meta name="twitter:description" content="求幂算法这篇日志我想展示一个非常基本的用以幂次计算的思路，借助这个思路我们可以更好理解一些抽象的概念，譬如半群（Semigroup）和含幺半群（Monoids）。
+幂次计算中有一个有名的算法（即计算如： Xˆn ），即Donald Knuth在《计算机程序艺术》（ TAOCP ）所曾提到的那个算法。接下来我们先聊聊这个算法。
+最直白的想法就是把X乘上n遍，当然有个算法要比这个快得多，这个算法通常被">
+  
+    <link rel="alternative" href="/atom.xml" title="斯是陋室" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">斯是陋室</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post--e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/" class="article-date">
+  <time datetime="2014-09-23T14:10:19.000Z" itemprop="datePublished">Sep 23 2014</time>
+</a>
     
-    margin: 0 auto;
-    position: relative;
-    max-width: 674px;
-    padding: 1rem 1rem 0 1rem;
-    font-weight: bold;
-    font-size: 90%;
-    display: inline-block;
-  }
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a>
+  </div>
 
-/* 
-  article-content
-*/
-  .article-content {
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      求幂算法的延伸运用
+    </h1>
+  
 
-    -webkit-touch-callout: text;
-    -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="求幂算法">求幂算法</h2><p>这篇日志我想展示一个非常基本的用以幂次计算的思路，借助这个思路我们可以更好理解一些抽象的概念，譬如半群（Semigroup）和含幺半群（Monoids）。</p>
+<p>幂次计算中有一个有名的算法（即计算如： Xˆn ），即Donald Knuth在《计算机程序艺术》（ TAOCP ）所曾提到的那个算法。接下来我们先聊聊这个算法。</p>
+<p>最直白的想法就是把X乘上n遍，当然有个算法要比这个快得多，这个算法通常被称为binary method、powering ladder或者repeated-squaring algorithm。</p>
+<p>举个例子，计算2ˆ23 。在这个算法中，这个算式会被转化成：2ˆ(10111)，其中 (10111) 则是23的二进制表达。之后就是扫描一遍，遇到0计算X二次方，遇到1则乘以X。</p>
+<p>这个方法有个问题，那就是这个算法是从左到右扫描，而对于计算机来说另一个方向来做更容易。因此Knuth提出了另一个算法。</p>
+<p>以下给出这个算法的实现代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">power</span>(<span class="params">x, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> res = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span> ( n &gt; <span class="number">0</span> ) &#123;</span><br><span class="line">    t = n % <span class="number">2</span>;</span><br><span class="line">    n = <span class="built_in">Math</span>.floor(n / <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span> ( t === <span class="number">1</span> ) &#123;</span><br><span class="line">      res *= x;</span><br><span class="line">    &#125;</span><br><span class="line">    x *= x;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res;</span><br></pre></td></tr></table></figure>
+<p>这个方程有两个整数参数 x 和 n， 返回x的n次方结果。</p>
+<p>首先这个方程内辉县设置一个辅助的变量y，初值为1，当然这个1可以看做是相乘操作的标示。</p>
+<p>随后，程序开始扫描n的二进制表达值。只要发现是1则乘上x，而在每次循环时都要运算x次方的值。当n为0时，代表扫描完毕，得到结果。</p>
+<p>那么这个算法背后的启发点是什么？以2^5为例。我们可以这样加快计算速度：</p>
+<p>( 2^2 ) <em> (2^2) </em> 2  –&gt;  (2^2)^2 * 2。</p>
+<p>这样的式子在计算机中就有优势，只需要保留(2 ^ 2)的值并不断利用更新下去。这也是为什么会把幂数转换为二进制的原因。<br>当然，本文不仅仅是介绍这个，好戏好在后头。这个算法是很多其他测试素数算法的雏形。</p>
+<h2 id="引入一些抽象">引入一些抽象</h2><p>至今还没有什么奇妙的东西，但我们发现将一个数进行幂次提升实际上是将这个数对自己相乘若干次而得到。同样这可以运用在相加运算上。譬如2 * 5 可以是这样来算：2+2+2+2+2。</p>
+<p>其实我们可以将前面的算法程序改造的更加通用，可以用于相乘或是相加。对此我们只需要改动几个地方。<br>对于当前的代码实现，我们把y作为相乘操作的标示，即1。如果我们要把程序用作相加操作，那么我们就需要把它设为0。那么我们就可以把这个变量提到函数的传递参数中。</p>
+<p>第二步，我们应该提供一个能够进行相乘或相加的函数。这个函数应当能够进行二项运算，如带有两项参数的函数。而这个函数也必须遵从以下规则：它必须有相关性（associative）， a <em> ( b </em> c ) = ( a <em> b ) </em> c。当然，结果的类型也必须是和输入的参数类型一致。</p>
+<p>幸运的是相乘、相加操作都是相关性操作，因此我们可以把他们封装成函数传递给power算法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">power</span>(<span class="params">x, n, id, f</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> res = id;</span><br><span class="line">  <span class="keyword">while</span> ( n &gt; <span class="number">0</span> ) &#123;</span><br><span class="line">    t = n % <span class="number">2</span>;</span><br><span class="line">    n = <span class="built_in">Math</span>.floor(n / <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span> ( t === <span class="number">1</span> ) &#123;</span><br><span class="line">      res = f(res, x);</span><br><span class="line">    &#125;</span><br><span class="line">    x = f(x, x);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这时候我们可以这样来算想2^10：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">power(<span class="number">2</span>, <span class="number">10</span>, <span class="number">1</span>, <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;<span class="keyword">return</span> a * b;&#125;); <span class="comment">// ==&gt; 1024</span></span><br></pre></td></tr></table></figure>
+<p>正如你所看到，我们传递1作为我们的标示，我们也传递了计算两数相乘的函数，不过如此。</p>
+<p>如果我们想计算2*10，同理，我们就传递标示0和相加函数，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">power(<span class="number">2</span>, <span class="number">10</span>, <span class="number">0</span>, <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;<span class="keyword">return</span> a + b;&#125;); <span class="comment">// ==&gt; 20</span></span><br></pre></td></tr></table></figure>
+<p>要记住，我们的算法只对关联性操作有效，如果是减法就不行，比如： 10 - ( 5 - 3 ) = 8，而 ( 10 -  5 ) - 3  = 2。</p>
+<h2 id="更多的抽象">更多的抽象</h2><p>从数学的角度而言，这个算法能够兼容任何关联性运算的代数结构，换而言之，它能够用作于半群（semigroup）。那什么是半群呢？</p>
+<p>给定一个半群S，在这个集合中进行关联性的二项运算 • ，使得： x • (y • z) = (x • y) • z  ; x, y, z ∈ S</p>
+<p>当然，这个集合必须有一个单位元（identity element），能够是这个集合成为含幺半群（Monoid）:</p>
+<p>给定一个含幺半群M，e为其单位元，在这个集合中进行关联性的二项运算 • ，使得 e • x = x • e = x ； x ∈ M。</p>
+<p>想想看当今我们现实工作中有没有运算结构能够满足之前给定的条件？是的，比如说要把一个字符串进行重复性的叠加，那么空字符就如同单位元。如果我们想要重复一个字符串n次，那么我们可以建构如下的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">repeat</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b; <span class="comment">// append stirng b to a in JS</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">power(<span class="string">'ab'</span>, <span class="number">12</span>, <span class="string">''</span>, repeat) <span class="comment">// ==&gt; abababababababababababab</span></span><br></pre></td></tr></table></figure>
+<p>现在考虑一下阵列（array）或是链表（list）。同样，当我们想要重复n次某个阵列来建构我们想要的阵列，我们也可以用这个算法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">repeat</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a.concat(b); <span class="comment">// append array b to a in JS</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">power([<span class="string">'a'</span>,<span class="number">1</span>], <span class="number">5</span>, [], repeat) <span class="comment">// ==&gt;; [ 'a', 1, 'a', 1, 'a', 1, 'a', 1, 'a', 1 ]</span></span><br></pre></td></tr></table></figure>
+<p>正如你所看到，这个算法看起来仅仅是针对重复计算某个数字，经我们改造后可以用到这么多场景，是不是奇妙？</p>
+<h2 id="Further_Reading">Further Reading</h2><p>The power algorithm as implemented here is based on <a href="http://www-cs-faculty.stanford.edu/%7Euno/taocp.html" target="_blank" rel="external">TAOCP</a>, Vol II, section 4.6.3.</p>
+<p>The whole explanation of how this works can be found in TAOCP or in the book <a href="http://shoup.net/ntb/" target="_blank" rel="external">A Computational Introduction to Number Theory and Algebra</a>. The PDF of the book is freely available on the author’s website. Look into section “Computing with large integers - The repeated squaring algorithm”.</p>
+<p>If you would like to learn about several uses for this algorithm and some more theory behind it, then consult the book called <a href="http://www.amazon.com/Elements-Programming-Alexander-Stepanov/dp/032163537X" target="_blank" rel="external">Elements of Programming</a>. This book is great in the way it defines the different types of functions, and how it uses the type system to be sure that the function is actually associative, binary, and so on. The author is the designer of C++ STL, so while the concerns of the book might seem very theoretical, then can be directly applied in OOP programs.</p>
+<p>The quotes about Semigroups and Monoids are from the book <a href="http://www.amazon.com/Handbook-Computational-Discrete-Mathematics-Applications/dp/1584883723/" target="_blank" rel="external">Handbook of Computational Group Theory</a>. A very interesting book if you are into CGT.</p>
+<p>If you want to learn more about Monoids and their implementations this chapter from <em>Learn You a Haskell</em> has a very nice introduction to <a href="http://learnyouahaskell.com/functors-applicative-functors-and-monoids#monoids" target="_blank" rel="external">Functors, Applicative Functors and Monoids</a>.</p>
+<p>It could be an interesting exercise to implement these concepts using say PHP and OOP, or for the PHP non lovers, in some other imperative language of your choice.</p>
 
-    ul, ol {
-      padding-left: 1.5rem;
-    }
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/" data-id="cig3nqdgf000ptz2ovepce9zh" class="article-share-link">Share</a>
+      
+        <a href="http://yoursite.com/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
 
-    ul {
-      list-style-type: square;
-    }
-  }
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/27/-T-Creating-a-wildly-successful-blog/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          创建一个成功的个人博客
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/09/22/object-inheritence-in-javascript/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Object Inheritence in Javascript</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Collective-Intelligence/">Collective Intelligence</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/artificial-intelligence/">artificial intelligence</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/algorithm/" style="font-size: 20px;">algorithm</a> <a href="/tags/artificial-intelligence/" style="font-size: 10px;">artificial intelligence</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/">Quick Walk through Recommender Systems and Memory-based Collaborative Filtering</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/27/-T-Creating-a-wildly-successful-blog/">创建一个成功的个人博客</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/">求幂算法的延伸运用</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/22/object-inheritence-in-javascript/">Object Inheritence in Javascript</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/21/javascript-memory-management/">Javascript Memory Management</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Lawrence Y. P. LIU<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'laosanitygithubio';
+  
+  var disqus_url = 'http://yoursite.com/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

@@ -1,398 +1,305 @@
-/*
-
-
-	|Globals
-
-*/
-  body {
-    -webkit-transition: opacity .25s ease-in;
-    transition: opacity .25s ease-in;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    ::selection {
-      color: #f9f9f9; 
-      background: #222;
-    }
-  } 
-  .page-loading {
-    opacity: .3;
-  }
-
-  #page-header{
-    margin-bottom: 4.5em;
-  }
-
-  #masthead{
-    margin: 2rem auto;
-    padding: 0 1rem 0 1rem;
-    overflow: auto;
-    max-width: 800px;
-  }
-
-  #site-title{
-    font-size: 1.5em;
-    float: left;
-    margin-right: 1.5rem;
-  }
-
-  #site-title a{
-    border-bottom: 4px solid #eee;
-    -webkit-transition: border-color 0.25s ease-in;
-    -moz-transition: border-color 0.25s ease-in;
-    -o-transition: border-color 0.25s ease-in;
-    transition: border-color  0.25s ease-in;
-  }
-  #site-title a:hover{
-    border-color: @light-gray;
-  }
-
-  #site-slogan{
-    font-size: 0.75em;
-    border-left: solid 1px @border-color;
-    padding-left: 1.5rem;
-    margin-top: 0.85em;
-    float: left;
-    line-height: 1.75;
-  }
-
-  #content{
-    clear: both;
-    margin: 0 auto;
-    min-height: 500px;
-  }
-
-  #content header{
-    font-size: 1.5rem;
-    margin: 4rem auto;
-    position: relative;
-    height: 6rem;
-    text-align: center;
-    max-width: 650px;
-    border-bottom: #dddddd solid 1px;
-  }
-
-  .article-list li{
-    list-style-type: none;
-    margin-bottom: 1.5em;
-    margin-top: 1.5em;
-  }
-
-  .article-list {
-
-    h2, h3{
-      font-size: 120%;
-    }
-
-  }
-
-  article .meta, .article-list .meta {
-    margin-bottom: 2.5em;
-    font-size: 0.75em;
-    line-height: 1.8;
-    text-align: center;
-    word-spacing: 5px;
-		color: #777;
-  }
-
-  #article-subtitle {
-    background: #fbfbfa;
-    padding: 16px;
-    border: 1px solid #eee;
-    text-align: center;
-    font-size: 85%;
-    margin-bottom: 2.5rem;
-  }
-
-  .article-list .meta{
-    margin-top: -0.75em;
-    text-align: left;
-    word-spacing: 3px;
-  }
-
-  .article-list h2{
-    margin-top: -1.6em;
-    margin-bottom: .6em;
-  }
-
-  #article-list-pagination{
-    margin: 4rem auto;
-    position: relative;
-    height: 6rem;
-    font-size: 0.75em;
-    text-align: center;
-    padding: 2rem;
-    max-width: 650px;
-    border-top: #dddddd solid 1px;
-  }
-
-
-  #content article{
-    padding: 0 1rem 0 1rem;
-    max-width: 674px;
-    margin: 0 auto;
-    position: relative;
-    color: @basic-black;
-  }
-
-  article img{
-    max-width: 100%;
-  }
-
-
-
-  figure[class*="lang"] {
-    margin-bottom: 1.5em;
-  }
-
-  figure[class*="lang"] table,
-  figure[class*="lang"] pre {
-    width: 100%;
-    border: solid 0.05em @code-border;
-    display: block;
-    overflow: auto;
-    background: @code-background;
-  }
-
-  figure[class*="lang"] pre{
-    padding: 0 6px;
-  }
-
-  figure[class*="lang"] table pre{
-    margin-bottom: 0;
-  }
-
-  td.gutter {
-    width: 30px;
-    padding: 0 4px;
-    background: @code-background;
-    border-right: solid 1px @code-border;
-    text-align: right;
-  }
-
-  td.code {
-    width: 100%;
-    padding: 0 6px;
-    background: @code-background;
-  }
-
-  #article-pagination{
-    margin: 4rem auto;
-    position: relative;
-    height: 6rem;
-    font-size: 0.75em;
-    text-align: center;
-    padding-top: 2rem;
-    max-width: 650px;
-    border-top: @border-gray solid 1px;
-  }
-
-  #article-pagination a{
-    top: 50%;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  #article-pagination .prev{
-
-  }
-
-  #article-pagination .next{
-
-  }
-
-  #page-footer{
-    width: 100%;
-    padding: 0.65rem 0 3rem;
-    background: @light-white;
-    border-top: 0.1rem solid @border-gray;
-    margin-top: 7.5rem;
-  }
-
-
-  #page-footer section{
-    text-align: center;
-    font-size: 0.75em;
-    overflow: auto;
-  }
-
-  #footer-menu ul{
-    list-style-type: none;
-    float: right;
-  }
-
-  #footer-menu ul li{
-    text-transform: uppercase;
-    display: inline-block;
-    margin-right: 1rem;
-  }
-
-  #footer-menu ul li a{
-    border-bottom: 4px solid transparent;
-    -webkit-transition: border-color 0.25s ease-in;
-    -moz-transition: border-color 0.25s ease-in;
-    -o-transition: border-color 0.25s ease-in;
-    transition: border-color  0.25s ease-in;
-  }
-  #footer-menu ul li a:hover{
-    border-color: @light-gray;
-  }
-
-
-/*
-
-
-  |Media Queries
-
-*/
-
-  @media only screen and (max-width: 560px) {
-
-    #site-title {
-      // width: 90%;
-      margin: 1em auto;
-      text-align: center;
-      float: none;
-    }
-
-    #footer-menu {
-      text-align: center;
-      ul {
-        float: none;
-      }
-    }
-
-    #site-slogan {
-      display: none;
-    }
-
-    #content{
-      article,
-      header {
-        // width: 90%;
-        margin: 0 auto;
-      }
-    }
-
-    article .meta {
-      margin-bottom: 1.8em;
-      font-size: 0.625em;
-      line-height: 1.8;
-    }
-
-    #article-list-pagination,
-    #article-pagination {
-      // width: 90%;
-      // margin: 0 auto;
-      // overflow: auto;
-
-      a {
-        position: relative;
-        // display: block;
-        // float: left;
-        clear: both;
-      }
-    }
-
-    #page-footer {
-      margin-top: 4.5rem;
-    }
-
-    #page-footer section {
-      width: 90%;
-      font-size: 0.75rem;
-      margin: 0 auto;
-    }
-
-  }
-
-  @media only screen and (min-width: 561px) and (max-width: 1080px) {
-
-    #masthead{
-      width: 90%;
-      margin: 3em auto 0;
-    }
-
-    #content{
-      article,
-      header {
-        width: 90%;
-        margin: 0 auto;
-      }
-    }
-
-    #page-footer section{
-      width: 90%;
-      margin: 0 auto;
-    }
-
-  }
-
-/*
-    Disqus css
-*/
-    #disqus_thread{
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1rem 0 1rem;
-    }
-
-/*
-    Back to top button css
-*/
-
-/*
-    index page css
-*/
-  #index-title {
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-    max-width: 650px;
-    border-bottom: #dddddd solid 1px;
-    padding-bottom: .5rem;
-    text-transform: uppercase;
-  }
-
-  .category-list {
-    margin: 0 auto;
-    display: block;
-    max-width: 650px;
-  }
-
-  .category-list-item {
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>创建一个成功的个人博客 | 斯是陋室</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="作为一个软件工程师，其中最好一个能够推销你自己的工具就是博客。我一直坚信，每一个关心自己未来前途的软件工程师都应该投入精力做自己的博客。
+仅仅通过自己个人，你只能认识一部分并不算多的人，因此你需要另辟新径来推广你自己的人脉圈。想想看过去一年里你认识了多少从事于科技领域得人，可能几百甚至过千，然而一个成功的博客能够让上十万的人认识你。
+博客是一个低成本、并且简单的个人推广工具，它能够高效的让你为更多">
+<meta property="og:type" content="article">
+<meta property="og:title" content="创建一个成功的个人博客">
+<meta property="og:url" content="http://yoursite.com/2015/01/27/-T-Creating-a-wildly-successful-blog/index.html">
+<meta property="og:site_name" content="斯是陋室">
+<meta property="og:description" content="作为一个软件工程师，其中最好一个能够推销你自己的工具就是博客。我一直坚信，每一个关心自己未来前途的软件工程师都应该投入精力做自己的博客。
+仅仅通过自己个人，你只能认识一部分并不算多的人，因此你需要另辟新径来推广你自己的人脉圈。想想看过去一年里你认识了多少从事于科技领域得人，可能几百甚至过千，然而一个成功的博客能够让上十万的人认识你。
+博客是一个低成本、并且简单的个人推广工具，它能够高效的让你为更多">
+<meta property="og:updated_time" content="2015-02-02T03:55:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="创建一个成功的个人博客">
+<meta name="twitter:description" content="作为一个软件工程师，其中最好一个能够推销你自己的工具就是博客。我一直坚信，每一个关心自己未来前途的软件工程师都应该投入精力做自己的博客。
+仅仅通过自己个人，你只能认识一部分并不算多的人，因此你需要另辟新径来推广你自己的人脉圈。想想看过去一年里你认识了多少从事于科技领域得人，可能几百甚至过千，然而一个成功的博客能够让上十万的人认识你。
+博客是一个低成本、并且简单的个人推广工具，它能够高效的让你为更多">
+  
+    <link rel="alternative" href="/atom.xml" title="斯是陋室" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">斯是陋室</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post--T-Creating-a-wildly-successful-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/27/-T-Creating-a-wildly-successful-blog/" class="article-date">
+  <time datetime="2015-01-27T10:11:35.000Z" itemprop="datePublished">Jan 27 2015</time>
+</a>
     
-    margin: 0 auto;
-    position: relative;
-    max-width: 674px;
-    padding: 1rem 1rem 0 1rem;
-    font-weight: bold;
-    font-size: 90%;
-    display: inline-block;
-  }
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Thoughts/">Thoughts</a>
+  </div>
 
-/* 
-  article-content
-*/
-  .article-content {
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      创建一个成功的个人博客
+    </h1>
+  
 
-    -webkit-touch-callout: text;
-    -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作为一个软件工程师，其中最好一个能够推销你自己的工具就是博客。我一直坚信，每一个关心自己未来前途的软件工程师都应该投入精力做自己的博客。</p>
+<p>仅仅通过自己个人，你只能认识一部分并不算多的人，因此你需要另辟新径来推广你自己的人脉圈。想想看过去一年里你认识了多少从事于科技领域得人，可能几百甚至过千，然而一个成功的博客能够让上十万的人认识你。</p>
+<p>博客是一个低成本、并且简单的个人推广工具，它能够高效的让你为更多人所知。一个成功的博客每天可以吸引成百上千的人，这些人当中就有可能给你更多机会，包括工作机会，甚至一些推广你项目的机会。</p>
+<p>诚然，我拥有一个十分成功的博客。如果我没有或是没有把它做得更好，有可能你现在是看不到这本书的。</p>
+<h2 id="为什么一个博客如此重要">为什么一个博客如此重要</h2><p>当你申请一份工作时，你的简历通常差不多就两页纸。当你参加了面试，你通常会和面试官谈上一两个小时。因此，想要通过简历和如此短的面试就了解一个工程师的技能是十分困难的，面试官亦很难做出判断工程师是否适合这个职位。</p>
+<p>但是想想看如果一个软件工程师他有个经常更新的博客，情况会怎么样。首先这个博客会包括一些关于这个工程师的有用的信息，一些代码例子，或是一些各个方面的软件开发的深入研究。通过他的博客，我能了解更多的情况。</p>
+<p>以上可以是个做博客、维护博客的理由，但事实上，这还不够。一个博客不仅能够找到一份更好的工作，同时能够助你成为一个更好的软件工程师以及个人的沟通能力，它能够带来许多你意想不到的机会。</p>
+<p>想想看那些著名的工程师，像Scott Hanselman，Uncle Bob Martin，以及Kent Beck，他们都有博客。</p>
+<p>如果你是一个独立开发者，或是你喜欢接一些私活，你会发现一个成功的博客能够给你带来许多的客户，而你不用去寻找客户。直接来找你的客户通常愿意支付你更高的人工，而且更愿意相信你。</p>
+<p>如果你的博客有足够的人流量，你能够通过它作为一个推广你的产品的平台。如果博客的人流量稳定了，你就可以根据访客的兴趣来构建产品，把访客直接转换成你的客户。</p>
+<p>不要忘记一个成功的博客能够给你带一定的知名度。许多知名的软件工程师都是因其博客而开始为人所知。举个好的例子，Jeff Atwood，Stack Overflow和Stack Exchange的创建人之一，他的博客“Coding Hour” 广受欢迎，这使得他的听众直接参与到Stack Overflow项目。并且通过这个博客他找到了他的伙伴Joel Spolsky。</p>
+<p>即使你忽略博客能够给你带来所有的经济效益，仍有一个摸不着的好处是你所无法忽略的，那就是交流技能的提升。组织起你的想法，并把它们转述成文字，这是一个很难联系但非常有价值的技能。通常写作能够帮助你磨练你的技能，而良好的交流能力能够在你生活的各个领域中起到关键作用。此外，如果你强制行的安排日常时程来更新你的博客，你的技能亦得以不断强化，你的专业知识得以保鲜。</p>
+<p>作为一个软件工程师，学习如何写作有可能确确实实能够帮助你写出更好的代码，因为你能够更好的表达出你的目的。当然也能帮助到你如何表达你的想法，如何让你的想法更有吸引力。</p>
+<h2 id="开始一个新博客">开始一个新博客</h2><p>你确信你需要一个博客了吧，好的，那你就要问了，怎么开始建立一个博客呢？</p>
+<p>时至今日，建立一个博客是相当的容易，你能够使用免费平台（像wordpress、Blogger）在五分钟内就能搞定一个博客。但是在这之前，有几件事需要你想清楚。</p>
+<p>一个免费的博客平台服务是最便宜也是最容易用来搭建博客，然而，这并不是最佳方案。因为这些免费平台存在一个问题，那就是这些平台通常并不是能够高度客制化的。你能够在这上面做些定制，但不能增加更高级的功能，譬如增加广告，增加购物车等等。这些东西现在对你来说可能并不重要，然而在接下来的日子里，当你的博客变得更加出色知名时，你也许就想要这些功能了。</p>
+<p>幸运的是，市面上有许多完全免费的网站管理平台。像wordpress，你能找到很多插件来增强你的博客。同样，你也能使用VPS（个人虚拟服务器）来管理你的博客平台。一个VPS能够给你一个云端操作系统。现在我就是在VPS上管理自己的博客，但如果你是刚开始，我并不建议这么做。</p>
+<p>创建博客的步骤：</p>
+<ul>
+<li>决定你的管理平台：免费，付费，或是VPS；</li>
+<li>设置博客软件；</li>
+<li>配置主体，进行客制化；</li>
+<li>开始写吧！</li>
+</ul>
+<h2 id="成功的关键">成功的关键</h2><p>好的，那么现在你已经搞定了你的博客平台，写了几篇文章了吧。但这还不够，如果没有人读它，那你就开始想要更多的人来你的博客。总之，这便是这个章节所想要谈的—创建一个成功的博客，不是吗？</p>
+<p>作为一个博客人，成功的一大部分因素取决于仅仅一件事：坚持。我曾经和许多成功的博客人聊过，他们有个共同点：他们发了非常多的博文。<br>这些成功的博客人有些坚持每天发博文坚持了许多年。</p>
+<p>但是别担心，你没必要每天都发博文。最重要的是要有一个日程安排来坚持写博。发博频率将决定你能够多快的成功。我强烈建议每周要至少发一篇博文。以此频率，一年来你就能发表52篇文章。这可十分关键，因为Google搜索引擎的机制，更多的文章能够给你带来更多的访问量。</p>
+<p>不幸的是，独自坚持并不能让你的博客广受欢迎，即使你每天发文坚持了好多年。因为你还得注重博文质量。有两个原因为什么内容的质量非常重要：首先，也许是最重要的是，文章的质量越高，越多的人就会浏览你的博文并收藏它。以此当你给别人传输你的观念你的价值，他人会容易相信你，成为你的忠实听众。</p>
+<p>另一个重要因素，文章的高质量能够给你带来一定的“回头率”。大部分搜索引擎判断一篇文章的文章，是根据这篇文章外部链接的数量（即有多少文章是指向这篇文章）。你的文章质量越高，你的文章就越可能通过更多的链接和媒体被更多人分享。</p>
+<p>再此之前，你对于这些会倍感压力，别担心。你的东西不一定要是最完美。当你开始写的时候，你的东西，恩，可能是相当的糟糕。但是只要你试着写出好的内容，就ok，而不是仅仅把你的想法直接不经修饰堆上去。每周发一篇高质量的文章，这就够了，你也会越变越好。</p>
+<p>有价值的文章可以以许多不同的形式呈现。分享你的经验或是一个有趣的故事也许能以更有趣的方式吸引别人。</p>
+<p>如果你做成了以上这两个事：坚持写作和写出高质量的内容，你就更有可能成功。我怎么知道这些的呢？因为我经常给软件工程师开讲座，而且每次我要求每周都有写博的人举个手。结果经常是，一个房间一百人，能看到一个举手就很幸运了。写出要好内容，并且坚持，将会轻易使你成为1%的顶尖人才，恩，至少从推广你自己的角度来说。</p>
+<blockquote>
+<p>我不知道要写什么<br>许多准博客人尚未开始写博，或是仅仅坚持一会便放弃了，那是因为他们不知道要写什么，要么就是他们没有墨水。<br>有个最好的方式来解决这个问题，在开始之前，可以先做脑力风暴来寻找话题，亦或将平时所想到的话题列入清单，有个自己的“话题库”。<br>同样，不要担心写出了【stellar post】，也不要顾虑他人的想法。有时候你不得不写一些你所不擅长的东西。 我曾今写过一些我觉得很糟的文章，但结果是意想不到的热门。<br>有个小技巧可以帮助你寻找话题，那就是和他人谈话，或是针对某个话题辩论。通常在讨论之后，我就会写出极佳的文章。叫上你的朋友，和他辩论，你就会发现有许多有价值的内容。</p>
+</blockquote>
+<p>当然，也有些其他方式能够让你的博客更加成功，接下来就聊聊这些。</p>
+<h2 id="提高访问量">提高访问量</h2><p>当你开始写博客时，要让你的博客增加访问量是有点难的。你不可能直接从搜索引擎获得流量，其他人也不可能一开始就主动链接你，那你该怎么办？</p>
+<p>给你一个建议，你可以去评论别人的博客。你可以找其他的同样发表了相关的主题的工程师，并在他们的博客上写下有意义的评论，而且当你有这个机会时，贴上你的链接。</p>
+<p>虽然这个策略生效需要几个月的时间，但是这能够帮助你与其他博客人建立连接，尤其是那些感激你的有创意的想法。每天试着去不同的博客，写下你的评论，同时，你将会渐渐看到有越来越多的人从别的博客跳转到你的博客。而你的评论越高，人们更有可能会去你的博客看看你说了些什么。你也可以写写日志来评论别人的博客。这也是一个非常高效的策略能够让你获得更多流量。</p>
+<p>另一个获得最初访问量（第一桶金）的好方法，对，那就是通过你的社交网络来分享你的博客以及博客链接。这个可能不能给你带来你所预期的流量，但值得一试。</p>
+<p>最后，如果你胆够大到认为你的内容足够好或是足够有争议的，你可以上传你的博文，或是让别人来上传博文到社区新闻网站，譬如Reddit或者Hacker News。一个忠告，有些逛社区网站的人纯碎就是找茬的。我曾经在Hacker News发表过文章，然而有一些评论人纯粹就是想拿叉子捅人，将我的文章评论得一无是处。碰到这些，你的脸皮不得不得变得厚些来承受这些所谓的批评。但是一旦你的文章在这些网站上被置顶了，你的博客就会大受欢迎，就会有更多人访问。总之，这值得一试。</p>
+<h2 id="我无法保证你成功">我无法保证你成功</h2><p>好吧，尽管你遵守了本章谈过所有的细节，我还是无法保证你的成功。我仅能说，听从了这些建议，你将更有可能成功。一个博客的成功，其中还是包含了一些运气的成分的，然而能够做到至少坚持写出好文章的博客人则是少之又少。</p>
+<blockquote>
+<p>行动吧</p>
+<ul>
+<li>你最喜欢的技术博客是哪个？看看这些博客，分析一些这些博客的更新频率以及每篇博文的平均长度。</li>
+<li>如果还没有博客，那赶快开始做一个吧！写下你的时刻表，来安排你写博的时间。</li>
+<li>至少坚持写博一年。要看到成就是需要时间的。大概一年后，你会发现你的博客变得有吸引力了。</li>
+<li>列出一张清单来记录你博客中所像谈的话题。每当你有新的想法，就把它加到这个清单。那么当你打算写博时，你便可思如泉涌，话题不尽。</li>
+</ul>
+</blockquote>
 
-    ul, ol {
-      padding-left: 1.5rem;
-    }
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/27/-T-Creating-a-wildly-successful-blog/" data-id="cig3nqdeq0000tz2oodwt39xi" class="article-share-link">Share</a>
+      
+        <a href="http://yoursite.com/2015/01/27/-T-Creating-a-wildly-successful-blog/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Quick Walk through Recommender Systems and Memory-based Collaborative Filtering
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">求幂算法的延伸运用</div>
+    </a>
+  
+</nav>
 
-    ul {
-      list-style-type: square;
-    }
-  }
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Collective-Intelligence/">Collective Intelligence</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/artificial-intelligence/">artificial intelligence</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/algorithm/" style="font-size: 20px;">algorithm</a> <a href="/tags/artificial-intelligence/" style="font-size: 10px;">artificial intelligence</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/">Quick Walk through Recommender Systems and Memory-based Collaborative Filtering</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/27/-T-Creating-a-wildly-successful-blog/">创建一个成功的个人博客</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/">求幂算法的延伸运用</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/22/object-inheritence-in-javascript/">Object Inheritence in Javascript</a>
+          </li>
+        
+          <li>
+            <a href="/2014/09/21/javascript-memory-management/">Javascript Memory Management</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Lawrence Y. P. LIU<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'laosanitygithubio';
+  
+  var disqus_url = 'http://yoursite.com/2015/01/27/-T-Creating-a-wildly-successful-blog/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
