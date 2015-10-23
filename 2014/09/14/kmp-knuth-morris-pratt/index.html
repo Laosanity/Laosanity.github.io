@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | 斯是陋室</title>
+  <title>KMP (Knuth-Morris-Pratt) | 斯是陋室</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Personal Blog Site">
-<meta property="og:type" content="website">
-<meta property="og:title" content="斯是陋室">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="#Problem
+This basic algorithm is basically used for matching a string pattern in another string. For example: If we want to match a string “abc” in a text says “abchd fbabc seee”. So in this situation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KMP (Knuth-Morris-Pratt)">
+<meta property="og:url" content="http://yoursite.com/2014/09/14/kmp-knuth-morris-pratt/index.html">
 <meta property="og:site_name" content="斯是陋室">
-<meta property="og:description" content="Personal Blog Site">
+<meta property="og:description" content="#Problem
+This basic algorithm is basically used for matching a string pattern in another string. For example: If we want to match a string “abc” in a text says “abchd fbabc seee”. So in this situation">
+<meta property="og:updated_time" content="2015-02-02T04:16:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="斯是陋室">
-<meta name="twitter:description" content="Personal Blog Site">
+<meta name="twitter:title" content="KMP (Knuth-Morris-Pratt)">
+<meta name="twitter:description" content="#Problem
+This basic algorithm is basically used for matching a string pattern in another string. For example: If we want to match a string “abc” in a text says “abchd fbabc seee”. So in this situation">
   
     <link rel="alternative" href="/atom.xml" title="斯是陋室" type="application/atom+xml">
   
@@ -59,163 +63,76 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/" class="archive-article-date">
-  <time datetime="2015-10-23T12:38:09.000Z" itemprop="datePublished">Oct 23</time>
+        <section id="main"><article id="post-kmp-knuth-morris-pratt" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/09/14/kmp-knuth-morris-pratt/" class="article-date">
+  <time datetime="2014-09-14T04:35:45.000Z" itemprop="datePublished">Sep 14 2014</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Algorithm/">Algorithm</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/">Quick Walk through Recommender Systems and Memory-based Collaborative Filtering</a>
+    <h1 class="article-title" itemprop="name">
+      KMP (Knuth-Morris-Pratt)
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/01/27/-T-Creating-a-wildly-successful-blog/" class="archive-article-date">
-  <time datetime="2015-01-27T10:11:35.000Z" itemprop="datePublished">Jan 27</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/01/27/-T-Creating-a-wildly-successful-blog/">创建一个成功的个人博客</a>
-    </h1>
-  
+        <p>#Problem</p>
+<p>This basic algorithm is basically used for matching a string pattern in another string. For example: If we want to match a string “abc” in a text says “abchd fbabc seee”. So in this situation how do we solve it?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> compareKMP(char * str1, char * str2, int * t)&#123;</span><br><span class="line">    int p1 = <span class="number">0</span>;</span><br><span class="line">    int p2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(p1 &amp;lt; <span class="number">31</span>)&#123;</span><br><span class="line">        <span class="comment">// length of compared sub-string</span></span><br><span class="line">        <span class="keyword">if</span> (str1[p1] != str2[p2])&#123;</span><br><span class="line">            <span class="keyword">if</span> (p2 == <span class="number">0</span> || p2 == <span class="number">1</span>) &#123; p2 = <span class="number">0</span>; p1++;&#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(p2 &amp;gt; <span class="number">1</span>) p2 = t[p2-<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            p1++; p2++;</span><br><span class="line">            <span class="comment">// p2 %= 7;</span></span><br><span class="line">            <span class="keyword">if</span>(p2 == Length)&#123;</span><br><span class="line">                p2 = <span class="number">0</span>;</span><br><span class="line">                printf(<span class="string">"Get it at %d\n"</span>, p1 - Length + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>#More</p>
+<p>This algorithm especially its partial match table is basic theory for other more complex algorithm like Aho-Corasick automation, which is an advanced multiple character-matching algorithm.</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/09/14/kmp-knuth-morris-pratt/" data-id="cig3n8kbq0008l82ofdr6dwpz" class="article-share-link">Share</a>
+      
+        <a href="http://yoursite.com/2014/09/14/kmp-knuth-morris-pratt/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/" class="archive-article-date">
-  <time datetime="2014-09-23T14:10:19.000Z" itemprop="datePublished">Sep 23</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/">求幂算法的延伸运用</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/09/22/object-inheritence-in-javascript/" class="archive-article-date">
-  <time datetime="2014-09-22T14:09:49.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/22/object-inheritence-in-javascript/">Object Inheritence in Javascript</a>
-    </h1>
+    <a href="/2014/09/18/javascript-read-notes/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Javascript Read Notes
+        
+      </div>
+    </a>
   
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/09/21/javascript-memory-management/" class="archive-article-date">
-  <time datetime="2014-09-21T15:38:46.000Z" itemprop="datePublished">Sep 21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/21/javascript-memory-management/">Javascript Memory Management</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/09/18/javascript-read-notes/" class="archive-article-date">
-  <time datetime="2014-09-18T15:08:25.000Z" itemprop="datePublished">Sep 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/18/javascript-read-notes/">Javascript Read Notes</a>
-    </h1>
-  
 
-    </header>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/09/14/kmp-knuth-morris-pratt/" class="archive-article-date">
-  <time datetime="2014-09-14T04:35:45.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/14/kmp-knuth-morris-pratt/">KMP (Knuth-Morris-Pratt)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+</section>
 </section>
         
           <aside id="sidebar">
@@ -311,11 +228,13 @@
 <script>
   var disqus_shortname = 'laosanitygithubio';
   
+  var disqus_url = 'http://yoursite.com/2014/09/14/kmp-knuth-morris-pratt/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
