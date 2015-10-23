@@ -1,71 +1,1350 @@
-<a id="rocket" href="#top" class="show"></a><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><meta name="description" content="Personal Blog Site"/><title>斯是陋室 | null</title><!--+get_resource("blog_basic.css")--><link rel="stylesheet" type="text/css" href="/css/normalize.css"/><link rel="stylesheet" type="text/css" href="/css/pure-min.css"/><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css"/><link rel="stylesheet" type="text/css" href="/css/highlight.css"/><link rel="stylesheet" type="text/css" href="/css/style.css"/><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"/><link rel="alternate" type="application/atom+xml" href="/atom.xml"/></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">斯是陋室</h1><a id="logo" href="/">斯是陋室</a><p class="description"></p></div><div id="nav-menu"><a href="/" class="current">Home</a><a href="/archives">Archive</a><a href="/" class="current">About</a><a href="/atom.xml">RSS</a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h2 class="post-title"><a href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/">Quick Walk through Recommender Systems and Memory-based Collaborative Filtering</a></h2><div class="post-meta">October 23, 2015</div><span data-thread-key="2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/" class="ds-thread-count"></span><div class="post-content">What can Recommender System provide?Imagine such scenario in real world: As a programmer, you are finding some books about mobile development on an online bookshop. However, overwhelmed by such numerous kinds of books, you may already get confused and have no idea which one to choose. And now what y</div><p class="readmore"><a href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/">Read More</a></p></div><div class="post"><h2 class="post-title"><a href="/2015/01/27/-T-Creating-a-wildly-successful-blog/">创建一个成功的个人博客</a></h2><div class="post-meta">January 27, 2015</div><span data-thread-key="2015/01/27/-T-Creating-a-wildly-successful-blog/" class="ds-thread-count"></span><div class="post-content">作为一个软件工程师，其中最好一个能够推销你自己的工具就是博客。我一直坚信，每一个关心自己未来前途的软件工程师都应该投入精力做自己的博客。
-仅仅通过自己个人，你只能认识一部分并不算多的人，因此你需要另辟新径来推广你自己的人脉圈。想想看过去一年里你认识了多少从事于科技领域得人，可能几百甚至过千，然而一个成功的博客能够让上十万的人认识你。
-博客是一个低成本、并且简单的个人推广工具，它能够高效的让你为更多人所知。一个成功的博客每天可以吸引成百上千的人，这些人当中就有可能给你更多机会，包括工作机会，甚至一些推广你项目的机会。
-诚然，我拥有一个十分成功的博客。如果我没有或是没有把它做得更好，有可能你现在是</div><p class="readmore"><a href="/2015/01/27/-T-Creating-a-wildly-successful-blog/">Read More</a></p></div><div class="post"><h2 class="post-title"><a href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/">求幂算法的延伸运用</a></h2><div class="post-meta">September 23, 2014</div><span data-thread-key="2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/" class="ds-thread-count"></span><div class="post-content">求幂算法这篇日志我想展示一个非常基本的用以幂次计算的思路，借助这个思路我们可以更好理解一些抽象的概念，譬如半群（Semigroup）和含幺半群（Monoids）。
-幂次计算中有一个有名的算法（即计算如： Xˆn ），即Donald Knuth在《计算机程序艺术》（ TAOCP ）所曾提到的那个算法。接下来我们先聊聊这个算法。
-最直白的想法就是把X乘上n遍，当然有个算法要比这个快得多，这个算法通常被称为binary method、powering ladder或者repeated-squaring algorithm。
-举个例子，计算2ˆ23 。在这个算法中，这个算式会被转化成：2ˆ(10111</div><p class="readmore"><a href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/">Read More</a></p></div><div class="post"><h2 class="post-title"><a href="/2014/09/22/object-inheritence-in-javascript/">Object Inheritence in Javascript</a></h2><div class="post-meta">September 22, 2014</div><span data-thread-key="2014/09/22/object-inheritence-in-javascript/" class="ds-thread-count"></span><div class="post-content">Object in JavascriptDifferent concepts between Java and Javascript:
-&amp;nbsp;
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
-Java
-JavaScript
 
 
 
 
-Strongly-typed
-Loosely-typed
 
-
-Static
-Dynamic
-
-
-Classical
-Prototypal
-
-
-Classes
-Functions
-
-
-Constructors
-Functions
-
-
-Methods
-Functions
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-&amp;nbsp;
-From here we can see that traditional CLASS and OBJECT con</div><p class="readmore"><a href="/2014/09/22/object-inheritence-in-javascript/">Read More</a></p></div><div class="post"><h2 class="post-title"><a href="/2014/09/21/javascript-memory-management/">Javascript Memory Management</a></h2><div class="post-meta">September 21, 2014</div><span data-thread-key="2014/09/21/javascript-memory-management/" class="ds-thread-count"></span><div class="post-content">IntroductionLow-level languages, like C, have low-level memory management primitives like malloc() and free(). On the other hand, JavaScript values are allocated when things (objects, strings, etc.) are created and “automatically” free’d when they are not used anymore. The latter process is called g</div><p class="readmore"><a href="/2014/09/21/javascript-memory-management/">Read More</a></p></div><div class="post"><h2 class="post-title"><a href="/2014/09/18/javascript-read-notes/">Javascript Read Notes</a></h2><div class="post-meta">September 18, 2014</div><span data-thread-key="2014/09/18/javascript-read-notes/" class="ds-thread-count"></span><div class="post-content">(need to expand for details of every points)
-0. Introduction
-Overview of a web application languages:   
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
 
-HTML (HyperText Markup Language) to define the content of web pages  
-CSS (Cascading Style Sheets) to specify the layout of web pages  
-Javascript to program the behaviour of web pages
 
-&amp;nbsp;
-1</div><p class="readmore"><a href="/2014/09/18/javascript-read-notes/">Read More</a></p></div><div class="post"><h2 class="post-title"><a href="/2014/09/14/kmp-knuth-morris-pratt/">KMP (Knuth-Morris-Pratt)</a></h2><div class="post-meta">September 14, 2014</div><span data-thread-key="2014/09/14/kmp-knuth-morris-pratt/" class="ds-thread-count"></span><div class="post-content">#Problem
-This basic algorithm is basically used for matching a string pattern in another string. For example: If we want to match a string “abc” in a text says “abchd fbabc seee”. So in this situation how do we solve it?
-12345678910111213141516171819void compareKMP(char * str1, char * str2, int * t)</div><p class="readmore"><a href="/2014/09/14/kmp-knuth-morris-pratt/">Read More</a></p></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><div class="widget-title">Categories</div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Collective-Intelligence/">Collective Intelligence</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a></li></ul></div><div class="widget"><div class="widget-title">Tags</div><div class="tagcloud"><a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/artificial-intelligence/" style="font-size: 15px;">artificial intelligence</a></div></div><div class="widget"><div class="widget-title">Recent</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/">Quick Walk through Recommender Systems and Memory-based Collaborative Filtering</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/27/-T-Creating-a-wildly-successful-blog/">创建一个成功的个人博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/">求幂算法的延伸运用</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/22/object-inheritence-in-javascript/">Object Inheritence in Javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/21/javascript-memory-management/">Javascript Memory Management</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/18/javascript-read-notes/">Javascript Read Notes</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/09/14/kmp-knuth-morris-pratt/">KMP (Knuth-Morris-Pratt)</a></li></ul></div><div class="widget"><div class="widget-title">Blogroll</div><ul><a href="http://example1.com/" title="site-name 1" target="_blank" rel="external">site-name 1</a></ul><ul><a href="http://example2.com/" title="site-name 2" target="_blank" rel="external">site-name 2</a></ul><ul><a href="http://example3.com/" title="site-name 3" target="_blank" rel="external">site-name 3</a></ul></div></div></div></div><script src="/js/highlight.pack.js" type="text/javascript"></script><script>hljs.initHighlightingOnLoad();
-</script><div id="footer">© <a href="/" real="nofollow">斯是陋室. </a>Powered by<a rel="nofollow" target="_blank" href="https://hexo.io">Hexo.</a>Theme by<a rel="nofollow" target="_blank" href="https://chopstack.com">Cho</a></div></div></body><script src="/js/jquery.min.js" type="text/javascript"></script>
-<script src="/js/totop.js" type="text/javascript"></script><script src="/js/fancybox.pack.js" type="text/javascript"></script><link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css"><script>$(document).ready(function() {
-  $("img").wrap(function() {
-    if ($(this).hasClass('nofancybox')) return;
-    return '<a href="' + $(this).attr("src") + '" rel="group" />'});
-});</script><script>$(document).ready(function() {
-  $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox({
-   helpers : {
-   title: { type: 'inside'}
-   },
-   afterLoad: function(){
-   this.title = this.title + ' ' + $(this.element).find('img').attr('alt');
-   }
- });
-});
-</script></html>
+<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
+
+
+    <meta name="description" content="Personal Blog Site" />
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="斯是陋室" type="application/atom+xml" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+<meta name="description" content="Personal Blog Site">
+<meta property="og:type" content="website">
+<meta property="og:title" content="斯是陋室">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="斯是陋室">
+<meta property="og:description" content="Personal Blog Site">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="斯是陋室">
+<meta name="twitter:description" content="Personal Blog Site">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post'
+  };
+</script>
+
+
+
+  <title> 斯是陋室 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">斯是陋室</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/" itemprop="url">
+                  Quick Walk through Recommender Systems and Memory-based Collaborative Filtering
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-10-23T20:38:09+08:00" content="Oct 23 2015">
+              Oct 23 2015
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Collective-Intelligence/" itemprop="url" rel="index">
+                    <span itemprop="name">Collective Intelligence</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/23/Quick Walk through Recommender systems and Memory-based Collaborative Filtering/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="What_can_Recommender_System_provide?">What can Recommender System provide?</h1><p>Imagine such scenario in real world: As a programmer, you are finding some books about mobile development on an online bookshop. However, overwhelmed by such numerous kinds of books, you may already get confused and have no idea which one to choose. And now what you really need maybe some suggestions from your programer friends who has bought or read some of them. Because you know that your friends and you are same kind of people, your taste are similar,  so you have reasons to trust your friends’ suggestions.</p>
+<p>Based on this behaviour, people started to apply  recommender system to online-shop. What happened after that? Say you like pop music and you want to try out latest pop musics online. From a recommend list you will have more possibility to find the music you want. And you no longer need to try it one by one in the latest-release list, which means you no longer have to face too much useless information and you save your time. Actually it makes more sence for e-commercial bussness, recommender systems provides higher quality advertiments services. Just look at those advertisements posted on most of online-shop websites, they are more intellegent and seems know your taste.</p>
+<h1 id="Walk_through_Recommender_System">Walk through Recommender System</h1><p>Then let’s talk about recommender systems and look at how they work.<br>The core technology used in recommender systems is the automated information filtering algorithm, more accurately, collaborative filtering, which firstly was mentioned in paper [1] by GroupLens research team. And the problem for collaborative filtering algorithm to solve is ￼ [1]:</p>
+<blockquote>
+<p>the problem of automated collaborative filtering is to predict how well a user will like an item that he has not rated.</p>
+</blockquote>
+<p>As defined above, the key to the problem is the prediction for rating-values, and the final purpose of this algorithm is the prediction.</p>
+<p>Before making prediction, we need measures on how much a person like or prefer a thing or an item? In [1], GroupLen defined two kinds of measures, explicit measures and implicit measures. Explicit measures can be inferred from avaliable data on user activity, such as rating. As for implicit measures, we can derive it from raw data on servers like purchase records, time spent reading or web logs. With those rating data, a prediciton engine can start to work. Commonly all those data are pictured as a big matrix of users vs. items, with each cell representing a user’s rating on an item. Now the problem left for prediction engine is to fill in the blank specified cells, and returns the list of top-n predicted items to users. </p>
+<p>In [2], collaborative algorithms ara classified into two main kinds of algorithm: Model-based and Memory-based. Model-based algorithms provide a prediction model by applying machine learning methods like Bayesian network or clustering. Algorithms in this category utilize a user’s ratings on other items as the input of model and return the predict ratings on this item for the user. Memory-based algorithms utilize the whole user-item data set to make prediciton, by employing statistical techniques (i.e. item-similarity and value-weighting). </p>
+<h1 id="User-based_Algorithm_vs-_Item-based_Algorithm">User-based Algorithm vs. Item-based Algorithm</h1><p>In this post I only talk about Memory-based algorithms. Before that, there are some statistical methods on calculating similarity between items (or persons) you need to know first.</p>
+<ol>
+<li>Pearson/Spearman. Discrete ratings -> spearman. Continuous ratings -> pearson. Use it depends on which kind of your rating value is.</li>
+<li>Eludien distance. This is much easier to implement.</li>
+<li>Adjusted-cosine-similarity. Suitable for calculating similarity between items.</li>
+</ol>
+<p>GroupLens came up with this algorithm (also called neighbor-based) in [1]. This method can be simplified as following several steps:</p>
+<blockquote>
+<ol>
+<li>Weight all users with repect to similarity with the active user.</li>
+<li>Select a subset of users to use as a set of predictors.</li>
+<li>Normalize ratings and compute a prediction from a weighted combination of selected neighbors’ ratings.</li>
+</ol>
+</blockquote>
+<p>But there still are challenges of user-based algorithm we have to face. Challenges for user-based algorithm also are mentioned in [2]. </p>
+<ol>
+<li><strong>Sparsity</strong>. Let’s recall basic steps of user-based algorithm. To acheive more accurate prediction, a dense item-user matrix is important, which provides more coverage on items and higher accuracy on user similarity. However in practice, it’s difficult to obtain such dence data especially on the start of a new system. </li>
+<li><strong>Scalability</strong>. From performance perspective, user-based algorithm requires computations on the scale of both users and items, which is not a small cost. In practice, recommender systems require real-time response to large number of users. Therefore this algorithm may not be able to handle such large scale of data if applied to commercial systems.</li>
+</ol>
+<p>In paper [2] GroupLens came up with a new filtering model based on item records, also called item-based collaborative filtering.</p>
+<blockquote>
+<ol>
+<li>Calculate the similarity between items.</li>
+<li>Calculate the weighted sum. Sum up all ratings values of reted items from a user, and each value is weighted by the similarity value between the rates items and the item to predict.</li>
+</ol>
+<p>Step2: in [2], author mentioned two techniques. Another one is Regression. </p>
+</blockquote>
+<p>For E-Commerce site of large scale,  user-based CF systems need calculate user-user similarity at higher frequency, which turns out be to the performance bottleneck and not suitable for real-time response. Different from user-based CF systems, item-based CF systems work on item-item scope. Unlike users data, items data seems more static, which leads the idea of precomputing the item similarity. With this idea, we can precompute all item similarity and store them in a quick table for retrieving the required similarity values. As a result, item-based CF system s can be faster than user-based CF systems especially working on a site of large scale.</p>
+<p>In [2], authors promote a model-based method of similarity computation:</p>
+<blockquote>
+<p>For  a user u on item i, out algorithm first retrieves the precomputed k most similar items corresponding to the target item i. Then it looks how many of those k items were purchased by the user u, based on this intersection then the prediction is computed using basic item-based CF algorithm</p>
+</blockquote>
+<p>A quality-performance trade-off here: For a better quality result, precomputed model of larger scale is needed, which leads worse performance instead. in [2] GroupLens hypothesized that this model-based approach will provide reasonably good prediction quality with even a small model size. They performed experiments to validate their hypothesis and you can read paper [2].</p>
+<h1 id="Challenges_of_collaborative_filtering">Challenges of collaborative filtering</h1><p>However in real word, CF system faces following chanllenges:</p>
+<ol>
+<li>Cold Start. As mentioned above, this problem causes data sparsity.</li>
+<li>Shiling Attack. Anybody can rates products. And people may give a positive rating for the products of their competitors.</li>
+<li>Scalability. The complexity n grows with the scale of customers or items. The number n is quiet big for CF systems in modern sites.</li>
+<li>Diversity and the Long Tail. Because collaborative filters recommend products based on past sales or ratings, they cannot usually recommend products with limited historical data. This can create a rich-get-richer effect for popular products. This bias toward popularity can prevent what are otherwise better consumer-product matches. </li>
+</ol>
+<p><em>Refs</em></p>
+<p><em>[1] GroupLens, An algorithm for performing collabrative filtering.</em></p>
+<p><em>[2] GroupLens, Item-Based Collaborative Filtering Recommendation Algorithms.</em></p>
+<p><em>[3] Toby Segaran, Programming Collective Intelligence.</em></p>
+<p>_[4] wiki: <a href="http://en.wikipedia.org/wiki/Collaborative\_filtering._" target="_blank" rel="external">http://en.wikipedia.org/wiki/Collaborative\_filtering._</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2015/01/27/-T-Creating-a-wildly-successful-blog/" itemprop="url">
+                  创建一个成功的个人博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-01-27T18:11:35+08:00" content="Jan 27 2015">
+              Jan 27 2015
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Thoughts/" itemprop="url" rel="index">
+                    <span itemprop="name">Thoughts</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/01/27/-T-Creating-a-wildly-successful-blog/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/01/27/-T-Creating-a-wildly-successful-blog/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>作为一个软件工程师，其中最好一个能够推销你自己的工具就是博客。我一直坚信，每一个关心自己未来前途的软件工程师都应该投入精力做自己的博客。</p>
+<p>仅仅通过自己个人，你只能认识一部分并不算多的人，因此你需要另辟新径来推广你自己的人脉圈。想想看过去一年里你认识了多少从事于科技领域得人，可能几百甚至过千，然而一个成功的博客能够让上十万的人认识你。</p>
+<p>博客是一个低成本、并且简单的个人推广工具，它能够高效的让你为更多人所知。一个成功的博客每天可以吸引成百上千的人，这些人当中就有可能给你更多机会，包括工作机会，甚至一些推广你项目的机会。</p>
+<p>诚然，我拥有一个十分成功的博客。如果我没有或是没有把它做得更好，有可能你现在是看不到这本书的。</p>
+<h2 id="为什么一个博客如此重要">为什么一个博客如此重要</h2><p>当你申请一份工作时，你的简历通常差不多就两页纸。当你参加了面试，你通常会和面试官谈上一两个小时。因此，想要通过简历和如此短的面试就了解一个工程师的技能是十分困难的，面试官亦很难做出判断工程师是否适合这个职位。</p>
+<p>但是想想看如果一个软件工程师他有个经常更新的博客，情况会怎么样。首先这个博客会包括一些关于这个工程师的有用的信息，一些代码例子，或是一些各个方面的软件开发的深入研究。通过他的博客，我能了解更多的情况。</p>
+<p>以上可以是个做博客、维护博客的理由，但事实上，这还不够。一个博客不仅能够找到一份更好的工作，同时能够助你成为一个更好的软件工程师以及个人的沟通能力，它能够带来许多你意想不到的机会。</p>
+<p>想想看那些著名的工程师，像Scott Hanselman，Uncle Bob Martin，以及Kent Beck，他们都有博客。</p>
+<p>如果你是一个独立开发者，或是你喜欢接一些私活，你会发现一个成功的博客能够给你带来许多的客户，而你不用去寻找客户。直接来找你的客户通常愿意支付你更高的人工，而且更愿意相信你。</p>
+<p>如果你的博客有足够的人流量，你能够通过它作为一个推广你的产品的平台。如果博客的人流量稳定了，你就可以根据访客的兴趣来构建产品，把访客直接转换成你的客户。</p>
+<p>不要忘记一个成功的博客能够给你带一定的知名度。许多知名的软件工程师都是因其博客而开始为人所知。举个好的例子，Jeff Atwood，Stack Overflow和Stack Exchange的创建人之一，他的博客“Coding Hour” 广受欢迎，这使得他的听众直接参与到Stack Overflow项目。并且通过这个博客他找到了他的伙伴Joel Spolsky。</p>
+<p>即使你忽略博客能够给你带来所有的经济效益，仍有一个摸不着的好处是你所无法忽略的，那就是交流技能的提升。组织起你的想法，并把它们转述成文字，这是一个很难联系但非常有价值的技能。通常写作能够帮助你磨练你的技能，而良好的交流能力能够在你生活的各个领域中起到关键作用。此外，如果你强制行的安排日常时程来更新你的博客，你的技能亦得以不断强化，你的专业知识得以保鲜。</p>
+<p>作为一个软件工程师，学习如何写作有可能确确实实能够帮助你写出更好的代码，因为你能够更好的表达出你的目的。当然也能帮助到你如何表达你的想法，如何让你的想法更有吸引力。</p>
+<h2 id="开始一个新博客">开始一个新博客</h2><p>你确信你需要一个博客了吧，好的，那你就要问了，怎么开始建立一个博客呢？</p>
+<p>时至今日，建立一个博客是相当的容易，你能够使用免费平台（像wordpress、Blogger）在五分钟内就能搞定一个博客。但是在这之前，有几件事需要你想清楚。</p>
+<p>一个免费的博客平台服务是最便宜也是最容易用来搭建博客，然而，这并不是最佳方案。因为这些免费平台存在一个问题，那就是这些平台通常并不是能够高度客制化的。你能够在这上面做些定制，但不能增加更高级的功能，譬如增加广告，增加购物车等等。这些东西现在对你来说可能并不重要，然而在接下来的日子里，当你的博客变得更加出色知名时，你也许就想要这些功能了。</p>
+<p>幸运的是，市面上有许多完全免费的网站管理平台。像wordpress，你能找到很多插件来增强你的博客。同样，你也能使用VPS（个人虚拟服务器）来管理你的博客平台。一个VPS能够给你一个云端操作系统。现在我就是在VPS上管理自己的博客，但如果你是刚开始，我并不建议这么做。</p>
+<p>创建博客的步骤：</p>
+<ul>
+<li>决定你的管理平台：免费，付费，或是VPS；</li>
+<li>设置博客软件；</li>
+<li>配置主体，进行客制化；</li>
+<li>开始写吧！</li>
+</ul>
+<h2 id="成功的关键">成功的关键</h2><p>好的，那么现在你已经搞定了你的博客平台，写了几篇文章了吧。但这还不够，如果没有人读它，那你就开始想要更多的人来你的博客。总之，这便是这个章节所想要谈的—创建一个成功的博客，不是吗？</p>
+<p>作为一个博客人，成功的一大部分因素取决于仅仅一件事：坚持。我曾经和许多成功的博客人聊过，他们有个共同点：他们发了非常多的博文。<br>这些成功的博客人有些坚持每天发博文坚持了许多年。</p>
+<p>但是别担心，你没必要每天都发博文。最重要的是要有一个日程安排来坚持写博。发博频率将决定你能够多快的成功。我强烈建议每周要至少发一篇博文。以此频率，一年来你就能发表52篇文章。这可十分关键，因为Google搜索引擎的机制，更多的文章能够给你带来更多的访问量。</p>
+<p>不幸的是，独自坚持并不能让你的博客广受欢迎，即使你每天发文坚持了好多年。因为你还得注重博文质量。有两个原因为什么内容的质量非常重要：首先，也许是最重要的是，文章的质量越高，越多的人就会浏览你的博文并收藏它。以此当你给别人传输你的观念你的价值，他人会容易相信你，成为你的忠实听众。</p>
+<p>另一个重要因素，文章的高质量能够给你带来一定的“回头率”。大部分搜索引擎判断一篇文章的文章，是根据这篇文章外部链接的数量（即有多少文章是指向这篇文章）。你的文章质量越高，你的文章就越可能通过更多的链接和媒体被更多人分享。</p>
+<p>再此之前，你对于这些会倍感压力，别担心。你的东西不一定要是最完美。当你开始写的时候，你的东西，恩，可能是相当的糟糕。但是只要你试着写出好的内容，就ok，而不是仅仅把你的想法直接不经修饰堆上去。每周发一篇高质量的文章，这就够了，你也会越变越好。</p>
+<p>有价值的文章可以以许多不同的形式呈现。分享你的经验或是一个有趣的故事也许能以更有趣的方式吸引别人。</p>
+<p>如果你做成了以上这两个事：坚持写作和写出高质量的内容，你就更有可能成功。我怎么知道这些的呢？因为我经常给软件工程师开讲座，而且每次我要求每周都有写博的人举个手。结果经常是，一个房间一百人，能看到一个举手就很幸运了。写出要好内容，并且坚持，将会轻易使你成为1%的顶尖人才，恩，至少从推广你自己的角度来说。</p>
+<blockquote>
+<p>我不知道要写什么<br>许多准博客人尚未开始写博，或是仅仅坚持一会便放弃了，那是因为他们不知道要写什么，要么就是他们没有墨水。<br>有个最好的方式来解决这个问题，在开始之前，可以先做脑力风暴来寻找话题，亦或将平时所想到的话题列入清单，有个自己的“话题库”。<br>同样，不要担心写出了【stellar post】，也不要顾虑他人的想法。有时候你不得不写一些你所不擅长的东西。 我曾今写过一些我觉得很糟的文章，但结果是意想不到的热门。<br>有个小技巧可以帮助你寻找话题，那就是和他人谈话，或是针对某个话题辩论。通常在讨论之后，我就会写出极佳的文章。叫上你的朋友，和他辩论，你就会发现有许多有价值的内容。</p>
+</blockquote>
+<p>当然，也有些其他方式能够让你的博客更加成功，接下来就聊聊这些。</p>
+<h2 id="提高访问量">提高访问量</h2><p>当你开始写博客时，要让你的博客增加访问量是有点难的。你不可能直接从搜索引擎获得流量，其他人也不可能一开始就主动链接你，那你该怎么办？</p>
+<p>给你一个建议，你可以去评论别人的博客。你可以找其他的同样发表了相关的主题的工程师，并在他们的博客上写下有意义的评论，而且当你有这个机会时，贴上你的链接。</p>
+<p>虽然这个策略生效需要几个月的时间，但是这能够帮助你与其他博客人建立连接，尤其是那些感激你的有创意的想法。每天试着去不同的博客，写下你的评论，同时，你将会渐渐看到有越来越多的人从别的博客跳转到你的博客。而你的评论越高，人们更有可能会去你的博客看看你说了些什么。你也可以写写日志来评论别人的博客。这也是一个非常高效的策略能够让你获得更多流量。</p>
+<p>另一个获得最初访问量（第一桶金）的好方法，对，那就是通过你的社交网络来分享你的博客以及博客链接。这个可能不能给你带来你所预期的流量，但值得一试。</p>
+<p>最后，如果你胆够大到认为你的内容足够好或是足够有争议的，你可以上传你的博文，或是让别人来上传博文到社区新闻网站，譬如Reddit或者Hacker News。一个忠告，有些逛社区网站的人纯碎就是找茬的。我曾经在Hacker News发表过文章，然而有一些评论人纯粹就是想拿叉子捅人，将我的文章评论得一无是处。碰到这些，你的脸皮不得不得变得厚些来承受这些所谓的批评。但是一旦你的文章在这些网站上被置顶了，你的博客就会大受欢迎，就会有更多人访问。总之，这值得一试。</p>
+<h2 id="我无法保证你成功">我无法保证你成功</h2><p>好吧，尽管你遵守了本章谈过所有的细节，我还是无法保证你的成功。我仅能说，听从了这些建议，你将更有可能成功。一个博客的成功，其中还是包含了一些运气的成分的，然而能够做到至少坚持写出好文章的博客人则是少之又少。</p>
+<blockquote>
+<p>行动吧</p>
+<ul>
+<li>你最喜欢的技术博客是哪个？看看这些博客，分析一些这些博客的更新频率以及每篇博文的平均长度。</li>
+<li>如果还没有博客，那赶快开始做一个吧！写下你的时刻表，来安排你写博的时间。</li>
+<li>至少坚持写博一年。要看到成就是需要时间的。大概一年后，你会发现你的博客变得有吸引力了。</li>
+<li>列出一张清单来记录你博客中所像谈的话题。每当你有新的想法，就把它加到这个清单。那么当你打算写博时，你便可思如泉涌，话题不尽。</li>
+</ul>
+</blockquote>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/" itemprop="url">
+                  求幂算法的延伸运用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2014-09-23T22:10:19+08:00" content="Sep 23 2014">
+              Sep 23 2014
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/09/23/-e6-b1-82-e5-b9-82-e7-ae-97-e6-b3-95/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="求幂算法">求幂算法</h2><p>这篇日志我想展示一个非常基本的用以幂次计算的思路，借助这个思路我们可以更好理解一些抽象的概念，譬如半群（Semigroup）和含幺半群（Monoids）。</p>
+<p>幂次计算中有一个有名的算法（即计算如： Xˆn ），即Donald Knuth在《计算机程序艺术》（ TAOCP ）所曾提到的那个算法。接下来我们先聊聊这个算法。</p>
+<p>最直白的想法就是把X乘上n遍，当然有个算法要比这个快得多，这个算法通常被称为binary method、powering ladder或者repeated-squaring algorithm。</p>
+<p>举个例子，计算2ˆ23 。在这个算法中，这个算式会被转化成：2ˆ(10111)，其中 (10111) 则是23的二进制表达。之后就是扫描一遍，遇到0计算X二次方，遇到1则乘以X。</p>
+<p>这个方法有个问题，那就是这个算法是从左到右扫描，而对于计算机来说另一个方向来做更容易。因此Knuth提出了另一个算法。</p>
+<p>以下给出这个算法的实现代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">power</span>(<span class="params">x, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> res = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span> ( n &gt; <span class="number">0</span> ) &#123;</span><br><span class="line">    t = n % <span class="number">2</span>;</span><br><span class="line">    n = <span class="built_in">Math</span>.floor(n / <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span> ( t === <span class="number">1</span> ) &#123;</span><br><span class="line">      res *= x;</span><br><span class="line">    &#125;</span><br><span class="line">    x *= x;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res;</span><br></pre></td></tr></table></figure>
+<p>这个方程有两个整数参数 x 和 n， 返回x的n次方结果。</p>
+<p>首先这个方程内辉县设置一个辅助的变量y，初值为1，当然这个1可以看做是相乘操作的标示。</p>
+<p>随后，程序开始扫描n的二进制表达值。只要发现是1则乘上x，而在每次循环时都要运算x次方的值。当n为0时，代表扫描完毕，得到结果。</p>
+<p>那么这个算法背后的启发点是什么？以2^5为例。我们可以这样加快计算速度：</p>
+<p>( 2^2 ) <em> (2^2) </em> 2  –&gt;  (2^2)^2 * 2。</p>
+<p>这样的式子在计算机中就有优势，只需要保留(2 ^ 2)的值并不断利用更新下去。这也是为什么会把幂数转换为二进制的原因。<br>当然，本文不仅仅是介绍这个，好戏好在后头。这个算法是很多其他测试素数算法的雏形。</p>
+<h2 id="引入一些抽象">引入一些抽象</h2><p>至今还没有什么奇妙的东西，但我们发现将一个数进行幂次提升实际上是将这个数对自己相乘若干次而得到。同样这可以运用在相加运算上。譬如2 * 5 可以是这样来算：2+2+2+2+2。</p>
+<p>其实我们可以将前面的算法程序改造的更加通用，可以用于相乘或是相加。对此我们只需要改动几个地方。<br>对于当前的代码实现，我们把y作为相乘操作的标示，即1。如果我们要把程序用作相加操作，那么我们就需要把它设为0。那么我们就可以把这个变量提到函数的传递参数中。</p>
+<p>第二步，我们应该提供一个能够进行相乘或相加的函数。这个函数应当能够进行二项运算，如带有两项参数的函数。而这个函数也必须遵从以下规则：它必须有相关性（associative）， a <em> ( b </em> c ) = ( a <em> b ) </em> c。当然，结果的类型也必须是和输入的参数类型一致。</p>
+<p>幸运的是相乘、相加操作都是相关性操作，因此我们可以把他们封装成函数传递给power算法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">power</span>(<span class="params">x, n, id, f</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> res = id;</span><br><span class="line">  <span class="keyword">while</span> ( n &gt; <span class="number">0</span> ) &#123;</span><br><span class="line">    t = n % <span class="number">2</span>;</span><br><span class="line">    n = <span class="built_in">Math</span>.floor(n / <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span> ( t === <span class="number">1</span> ) &#123;</span><br><span class="line">      res = f(res, x);</span><br><span class="line">    &#125;</span><br><span class="line">    x = f(x, x);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这时候我们可以这样来算想2^10：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">power(<span class="number">2</span>, <span class="number">10</span>, <span class="number">1</span>, <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;<span class="keyword">return</span> a * b;&#125;); <span class="comment">// ==&gt; 1024</span></span><br></pre></td></tr></table></figure>
+<p>正如你所看到，我们传递1作为我们的标示，我们也传递了计算两数相乘的函数，不过如此。</p>
+<p>如果我们想计算2*10，同理，我们就传递标示0和相加函数，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">power(<span class="number">2</span>, <span class="number">10</span>, <span class="number">0</span>, <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;<span class="keyword">return</span> a + b;&#125;); <span class="comment">// ==&gt; 20</span></span><br></pre></td></tr></table></figure>
+<p>要记住，我们的算法只对关联性操作有效，如果是减法就不行，比如： 10 - ( 5 - 3 ) = 8，而 ( 10 -  5 ) - 3  = 2。</p>
+<h2 id="更多的抽象">更多的抽象</h2><p>从数学的角度而言，这个算法能够兼容任何关联性运算的代数结构，换而言之，它能够用作于半群（semigroup）。那什么是半群呢？</p>
+<p>给定一个半群S，在这个集合中进行关联性的二项运算 • ，使得： x • (y • z) = (x • y) • z  ; x, y, z ∈ S</p>
+<p>当然，这个集合必须有一个单位元（identity element），能够是这个集合成为含幺半群（Monoid）:</p>
+<p>给定一个含幺半群M，e为其单位元，在这个集合中进行关联性的二项运算 • ，使得 e • x = x • e = x ； x ∈ M。</p>
+<p>想想看当今我们现实工作中有没有运算结构能够满足之前给定的条件？是的，比如说要把一个字符串进行重复性的叠加，那么空字符就如同单位元。如果我们想要重复一个字符串n次，那么我们可以建构如下的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">repeat</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b; <span class="comment">// append stirng b to a in JS</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">power(<span class="string">'ab'</span>, <span class="number">12</span>, <span class="string">''</span>, repeat) <span class="comment">// ==&gt; abababababababababababab</span></span><br></pre></td></tr></table></figure>
+<p>现在考虑一下阵列（array）或是链表（list）。同样，当我们想要重复n次某个阵列来建构我们想要的阵列，我们也可以用这个算法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">repeat</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a.concat(b); <span class="comment">// append array b to a in JS</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">power([<span class="string">'a'</span>,<span class="number">1</span>], <span class="number">5</span>, [], repeat) <span class="comment">// ==&gt;; [ 'a', 1, 'a', 1, 'a', 1, 'a', 1, 'a', 1 ]</span></span><br></pre></td></tr></table></figure>
+<p>正如你所看到，这个算法看起来仅仅是针对重复计算某个数字，经我们改造后可以用到这么多场景，是不是奇妙？</p>
+<h2 id="Further_Reading">Further Reading</h2><p>The power algorithm as implemented here is based on <a href="http://www-cs-faculty.stanford.edu/%7Euno/taocp.html" target="_blank" rel="external">TAOCP</a>, Vol II, section 4.6.3.</p>
+<p>The whole explanation of how this works can be found in TAOCP or in the book <a href="http://shoup.net/ntb/" target="_blank" rel="external">A Computational Introduction to Number Theory and Algebra</a>. The PDF of the book is freely available on the author’s website. Look into section “Computing with large integers - The repeated squaring algorithm”.</p>
+<p>If you would like to learn about several uses for this algorithm and some more theory behind it, then consult the book called <a href="http://www.amazon.com/Elements-Programming-Alexander-Stepanov/dp/032163537X" target="_blank" rel="external">Elements of Programming</a>. This book is great in the way it defines the different types of functions, and how it uses the type system to be sure that the function is actually associative, binary, and so on. The author is the designer of C++ STL, so while the concerns of the book might seem very theoretical, then can be directly applied in OOP programs.</p>
+<p>The quotes about Semigroups and Monoids are from the book <a href="http://www.amazon.com/Handbook-Computational-Discrete-Mathematics-Applications/dp/1584883723/" target="_blank" rel="external">Handbook of Computational Group Theory</a>. A very interesting book if you are into CGT.</p>
+<p>If you want to learn more about Monoids and their implementations this chapter from <em>Learn You a Haskell</em> has a very nice introduction to <a href="http://learnyouahaskell.com/functors-applicative-functors-and-monoids#monoids" target="_blank" rel="external">Functors, Applicative Functors and Monoids</a>.</p>
+<p>It could be an interesting exercise to implement these concepts using say PHP and OOP, or for the PHP non lovers, in some other imperative language of your choice.</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2014/09/22/object-inheritence-in-javascript/" itemprop="url">
+                  Object Inheritence in Javascript
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2014-09-22T22:09:49+08:00" content="Sep 22 2014">
+              Sep 22 2014
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/09/22/object-inheritence-in-javascript/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/09/22/object-inheritence-in-javascript/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="Object_in_Javascript">Object in Javascript</h1><p>Different concepts between Java and Javascript:</p>
+<p>&nbsp;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Java</th>
+<th style="text-align:center">JavaScript</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Strongly-typed</td>
+<td style="text-align:center">Loosely-typed</td>
+</tr>
+<tr>
+<td style="text-align:center">Static</td>
+<td style="text-align:center">Dynamic</td>
+</tr>
+<tr>
+<td style="text-align:center">Classical</td>
+<td style="text-align:center">Prototypal</td>
+</tr>
+<tr>
+<td style="text-align:center">Classes</td>
+<td style="text-align:center">Functions</td>
+</tr>
+<tr>
+<td style="text-align:center">Constructors</td>
+<td style="text-align:center">Functions</td>
+</tr>
+<tr>
+<td style="text-align:center">Methods</td>
+<td style="text-align:center">Functions</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>From here we can see that traditional CLASS and OBJECT concept is totally different in Javascript compared with JAVA. In JS, everything except primitive values(type like: String, number, undefined, true/false) is object. And in Javascript,  implement of Object-oriented concept is simple and different from JAVA, which is called prototype-based. This article will talk about OBJECT concept in Javascript.</p>
+<p>Following are points about object in Javascript:</p>
+<ol>
+<li>In Javascript. each “function” inherit “Object”. And  are actually functions. And one object can contain one or more functions.</li>
+<li>An object have two objects: itself and Prototype. e.g. Data.Prototype is Object because Data this object inherits Object. Obviously Object.Prototype is nothing.</li>
+<li>In Javascript, since no class concept here, so the inheritance happens between objects.</li>
+</ol>
+<h1 id="Object_Inheritence_in_Javascript">Object Inheritence in Javascript</h1><p>Four steps:</p>
+<ol>
+<li>It creates a new object. The type of this object, is simply <em>object</em>.</li>
+<li>It sets this new object’s internal, inaccessible, <em>[[prototype]]</em> property to be the constructor function’s external, accessible, <em>prototype</em> object (every function object automatically has a <em>prototype</em> property).</li>
+<li>It executes the constructor function, using the newly created object whenever this is mentioned.</li>
+<li>It returns the newly created object, unless the constructor function returns a non-primitive value. In this case, that non-primitive value will be returned.<br>Note: <em>constructor function</em> refers the function after the new, as in new myConstructorFunc(arg1, arg2).</li>
+</ol>
+<p>Once this is done, if an undefined property of the new object is requested, the script will check the object’s<em>[[prototype]]</em> object for the property instead. This is how you can get something similar to traditional class inheritance in JavaScript.</p>
+<p>The most difficult part about this is point number 2. Every object (including functions) has this internal property called <em>[[prototype]]</em>. It can <em>only</em> be set at object creation time, either with <em>new</em>, with <em>Object.create</em>, or based on the literal (functions default to Function.prototype, numbers to Number.prototype, etc.). It can only be read with <em>Object.getPrototypeOf(someObject)</em>. There is <em>no</em> other way to set or read this value.</p>
+<p>Functions, in addition to the hidden <em>[[prototype]]</em> property, also have a property called <em>prototype</em>, and it is this that you can access, and modify, to provide inherited properties and methods for the objects you make.</p>
+<p><a href="http://localhost/wordpress/wp-content/uploads/2014/09/Screen-Shot-2014-08-12-at-11.59.47-pm.png" target="_blank" rel="external"><img src="http://localhost/wordpress/wp-content/uploads/2014/09/Screen-Shot-2014-08-12-at-11.59.47-pm.png" alt="Screen Shot 2014-08-12 at 11.59.47 pm"></a></p>
+<p>&nbsp;</p>
+<p>Here is an example:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">ObjMaker = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="keyword">this</span>.a = <span class="string">'first'</span>;&#125;;</span><br><span class="line"><span class="comment">// ObjMaker is just a function, there's nothing special about it that makes</span></span><br><span class="line"><span class="comment">// it a constructor.</span></span><br><span class="line"></span><br><span class="line">ObjMaker.prototype.b = <span class="string">'second'</span>;</span><br><span class="line"><span class="comment">// like all functions, ObjMaker has an accessible prototype property that</span></span><br><span class="line"><span class="comment">// we can alter. I just added a property called 'b' to it. Like</span></span><br><span class="line"><span class="comment">// all objects, ObjMaker also has an inaccessible [[prototype]] property</span></span><br><span class="line"><span class="comment">// that we can't do anything with</span></span><br><span class="line"></span><br><span class="line">obj1 = <span class="keyword">new</span> ObjMaker();</span><br><span class="line"><span class="comment">// 3 things just happened.</span></span><br><span class="line"><span class="comment">// A new, empty object was created called obj1\.  At first obj1 was the same</span></span><br><span class="line"><span class="comment">// as &#123;&#125;. The [[prototype]] property of obj1 was then set to the current</span></span><br><span class="line"><span class="comment">// object value of the ObjMaker.prototype (if ObjMaker.prototype is later</span></span><br><span class="line"><span class="comment">// assigned a new object value, obj1's [[prototype]] will not change, but you</span></span><br><span class="line"><span class="comment">// can alter the properties of ObjMaker.prototype to add to both the</span></span><br><span class="line"><span class="comment">// prototype and [[prototype]]). The ObjMaker function was executed, with</span></span><br><span class="line"><span class="comment">// obj1 in place of this... so obj1.a was set to 'first'.</span></span><br><span class="line"></span><br><span class="line">obj1.a;</span><br><span class="line"><span class="comment">// returns 'first'</span></span><br><span class="line">obj1.b;</span><br><span class="line"><span class="comment">// obj1 doesn't have a property called 'b', so JavaScript checks</span></span><br><span class="line"><span class="comment">// its [[prototype]]. Its [[prototype]] is the same as ObjMaker.prototype</span></span><br><span class="line"><span class="comment">// ObjMaker.prototype has a property called 'b' with value 'second'</span></span><br><span class="line"><span class="comment">// returns 'second'</span></span><br></pre></td></tr></table></figure>
+<p>It’s like class inheritance because now, any objects you make using new ObjMaker() will also appear to have inherited the ‘b’ property.<br>If you want something like a subclass, then you do this:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">SubObjMaker = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">SubObjMaker.prototype = <span class="keyword">new</span> ObjMaker(); <span class="comment">// note: this pattern is deprecated!</span></span><br><span class="line"><span class="comment">// Because we used 'new', the [[prototype]] property of SubObjMaker.prototype</span></span><br><span class="line"><span class="comment">// is now set to the object value of ObjMaker.prototype.</span></span><br><span class="line"></span><br><span class="line">SubObjMaker.prototype.c = <span class="string">'third'</span>;</span><br><span class="line">obj2 = <span class="keyword">new</span> SubObjMaker();</span><br><span class="line"><span class="comment">// [[prototype]] property of obj2 is now set to SubObjMaker.prototype</span></span><br><span class="line"><span class="comment">// Remember that the [[prototype]] property of SubObjMaker.prototype</span></span><br><span class="line"><span class="comment">// is ObjMaker.prototype. So now obj2 has a prototype chain!</span></span><br><span class="line"><span class="comment">// obj2 ---&amp;gt; SubObjMaker.prototype ---&amp;gt; ObjMaker.prototype</span></span><br><span class="line"></span><br><span class="line">obj2.c;</span><br><span class="line"><span class="comment">// returns 'third', from SubObjMaker.prototype</span></span><br><span class="line"></span><br><span class="line">obj2.b;</span><br><span class="line"><span class="comment">// returns 'second', from ObjMaker.prototype</span></span><br><span class="line"></span><br><span class="line">obj2.a;</span><br><span class="line"><span class="comment">// returns 'first', from SubObjMaker.prototype, because SubObjMaker.prototype</span></span><br><span class="line"><span class="comment">// was created with the ObjMaker function, which assigned a for us</span></span><br></pre></td></tr></table></figure>
+<p>I read a ton of rubbish on this subject before finally finding <a href="http://joost.zeekat.nl/constructors-considered-mildly-confusing.html" target="_blank" rel="external">this page</a>, where this is explained very well with nice diagrams.</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2014/09/21/javascript-memory-management/" itemprop="url">
+                  Javascript Memory Management
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2014-09-21T23:38:46+08:00" content="Sep 21 2014">
+              Sep 21 2014
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/09/21/javascript-memory-management/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/09/21/javascript-memory-management/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="Introduction">Introduction</h1><p>Low-level languages, like C, have low-level memory management primitives like <code>malloc()</code> and <code>free()</code>. On the other hand, JavaScript values are allocated when things (objects, strings, etc.) are created and “automatically” free’d when they are not used anymore. The latter process is called <em>garbage collection</em>. This “automatically” is a source of confusion and gives JavaScript (and high-level languages) developers the impression they can decide not to care about memory management. This is a mistake.</p>
+<h1 id="Memory_life_cycle">Memory life cycle</h1><p>Regardless of the programming language, memory life cycle is pretty much always the same:</p>
+<p>The first and second parts are explicit in all languages. The last part is explicit in low-level languages, but is mostly implicit in high-level languages like JavaScript.</p>
+<h2 id="Allocation_in_JavaScript">Allocation in JavaScript</h2><h3 id="Value_initialization">Value initialization</h3><p>In order not to bother the programmer with allocations, JavaScript does it alongside with declaring values.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="number">123</span>; <span class="comment">// allocates memory for a number</span></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"azerty"</span>; <span class="comment">// allocates memory for a string </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123;</span><br><span class="line">  a: <span class="number">1</span>,</span><br><span class="line">  b: <span class="literal">null</span></span><br><span class="line">&#125;; <span class="comment">// allocates memory for an object and contained values</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// (like object) allocates memory for the array and </span></span><br><span class="line"><span class="comment">// contained values</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="literal">null</span>, <span class="string">"abra"</span>]; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + <span class="number">2</span>;</span><br><span class="line">&#125; <span class="comment">// allocates a function (which is a callable object)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// function expressions also allocate an object</span></span><br><span class="line">someElement.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  someElement.style.backgroundColor = <span class="string">'blue'</span>;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="Allocation_via_function_calls">Allocation via function calls</h3><p>Some function calls result in object allocation.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="comment">// allocates a DOM element</span></span><br><span class="line"><span class="keyword">var</span> e = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br></pre></td></tr></table></figure><br>Some methods allocate new values or objects:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">"azerty"</span>;</span><br><span class="line"><span class="keyword">var</span> s2 = s.substr(<span class="number">0</span>, <span class="number">3</span>); <span class="comment">// s2 is a new string</span></span><br><span class="line"><span class="comment">// Since strings are immutable value, </span></span><br><span class="line"><span class="comment">// JavaScript may decide to not allocate memory, </span></span><br><span class="line"><span class="comment">// but just store the [0, 3] range.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">"ouais ouais"</span>, <span class="string">"nan nan"</span>];</span><br><span class="line"><span class="keyword">var</span> a2 = [<span class="string">"generation"</span>, <span class="string">"nan nan"</span>];</span><br><span class="line"><span class="keyword">var</span> a3 = a.concat(a2); </span><br><span class="line"><span class="comment">// new array with 4 elements being</span></span><br><span class="line"><span class="comment">// the concatenation of a and a2 elements</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Using_values">Using values</h2><p>Using value basically means reading and writing in allocated memory. This can be done by reading or writing the value of a variable or an object property or even passing an argument to a function.</p>
+<h2 id="Release_when_the_memory_is_not_needed_anymore">Release when the memory is not needed anymore</h2><p>Most of memory management issues come at this phase. The hardest task here is to find when “the allocated memory is not needed any longer”. It often requires for the developer to determine where in the program such piece of memory is not needed anymore and free it.</p>
+<p>High-level languages embed a piece of software called “garbage collector” whose job is to track memory allocation and use in order to find when a piece of allocated memory is not needed any longer in which case, it will automatically free it. This process is an approximation since the general problem of knowing whether some piece of memory is needed is <a href="http://en.wikipedia.org/wiki/Decidability_%28logic%29" target="_blank" rel="external">undecidable</a> (can’t be solved by an algorithm).</p>
+<h1 id="Garbage_collection">Garbage collection</h1><p>As stated above the general problem of automatically finding whether some memory “is not needed anymore” is undecidable. As a consequence, garbage collections implement a restriction of a solution to the general problem. This section will explain the necessary notions to understand the main garbage collection algorithms and their limitations.</p>
+<h2 id="References">References</h2><p>The main notion garbage collection algorithms rely on is the notion of <em>reference</em>. Within the context of memory management, an object is said to reference another object if the former has an access to the latter (either implicitly or explicitly). For instance, a JavaScript object has a reference to its <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain" target="_blank" rel="external">prototype</a> (implicit reference) and to its properties values (explicit reference).</p>
+<p>In this context, the notion of “object” is extended to something broader than regular JavaScript objects and also contains function scopes (or the global lexical scope)</p>
+<h2 id="Reference-counting_garbage_collection">Reference-counting garbage collection</h2><p>This is the most naive garbage collection algorithm. This algorithm reduces the definition of “an object is not needed anymore” to “an object has no other object referencing to it”. An object is considered garbage collectable if there is zero reference pointing at this object.</p>
+<h3 id="Example">Example</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = &#123; </span><br><span class="line">  a: &#123;</span><br><span class="line">    b:<span class="number">2</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;; </span><br><span class="line"><span class="comment">// 2 objects are created. One is referenced by the other as one of its property.</span></span><br><span class="line"><span class="comment">// The other is referenced by virtue of being assigned to the 'o' variable.</span></span><br><span class="line"><span class="comment">// Obviously, none can be garbage-collected</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o2 = o; <span class="comment">// the 'o2' variable is the second thing that </span></span><br><span class="line">            <span class="comment">// has a reference to the object</span></span><br><span class="line">o = <span class="number">1</span>;      <span class="comment">// now, the object that was originally in 'o' has a unique reference</span></span><br><span class="line">            <span class="comment">// embodied by the 'o2' variable</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> oa = o2.a; <span class="comment">// reference to 'a' property of the object.</span></span><br><span class="line">               <span class="comment">// This object has now 2 references: one as a property, </span></span><br><span class="line">               <span class="comment">// the other as the 'oa' variable</span></span><br><span class="line"></span><br><span class="line">o2 = <span class="string">"yo"</span>; <span class="comment">// The object that was originally in 'o' has now zero</span></span><br><span class="line">           <span class="comment">// references to it. It can be garbage-collected.</span></span><br><span class="line">           <span class="comment">// However what was its 'a' property is still referenced by </span></span><br><span class="line">           <span class="comment">// the 'oa' variable, so it cannot be free'd</span></span><br><span class="line"></span><br><span class="line">oa = <span class="literal">null</span>; <span class="comment">// what was the 'a' property of the object originally in o </span></span><br><span class="line">           <span class="comment">// has zero references to it. It can be garbage collected</span></span><br></pre></td></tr></table></figure>
+<h3 id="Limitation_:_cycles">Limitation : cycles</h3><p>This naive algorithm has the limitation that if objects reference one another (and form a cycle), they may be “not needed anymore” and yet not garbage collectable.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line">  <span class="keyword">var</span> o2 = &#123;&#125;;</span><br><span class="line">  o.a = o2; <span class="comment">// o references o2</span></span><br><span class="line">  o2.a = o; <span class="comment">// o2 references o</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">"azerty"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f();</span><br><span class="line"><span class="comment">// Two objects are created and reference one another thus creating a cycle.</span></span><br><span class="line"><span class="comment">// They will not get out of the function scope after the function call, so they</span></span><br><span class="line"><span class="comment">// are effectively useless and could be free'd.</span></span><br><span class="line"><span class="comment">// However, the reference-counting algorithm considers that since each of both</span></span><br><span class="line"><span class="comment">// object is referenced at least once, none can be garbage-collected.</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Real_life_example">Real life example</h3><p>Internet Explorer 6, 7 are known to have a reference-counting garbage collector for DOM objects. For them, a common pattern is known to generate memory leaks systematically:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</span><br><span class="line">div.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  doSomething();</span><br><span class="line">&#125;; </span><br><span class="line"><span class="comment">// The div has a reference to the event handler via its 'onclick' property</span></span><br><span class="line"><span class="comment">// The handler also has a reference to the div since the 'div' variable can </span></span><br><span class="line"><span class="comment">// be accessed within the function scope. This cycle will cause both objects </span></span><br><span class="line"><span class="comment">// not to be garbage-collected and thus a memory leak.</span></span><br></pre></td></tr></table></figure>
+<h2 id="Mark-and-sweep_algorithm">Mark-and-sweep algorithm</h2><p>This algorithm reduces the definition of “an object is not needed anymore” to “an object is unreachable”.</p>
+<p>This algorithm assumes the knowledge of a set of objects called <em>roots</em> (In JavaScript, the root is the global object). Periodically, the garbage-collector will start from these roots, find all objects that are referenced from these roots, then all objects referenced from these, etc. Starting from the roots, the garbage collector will thus find all <em>reachable</em> objects and collect all non-reachable objects.</p>
+<p>This algorithm is better than the previous one since “an object has zero reference” leads to this object being unreachable. The opposite is not true as we have seen with cycles.</p>
+<p>As of 2012, all modern browsers ship a mark-and-sweep garbage-collector. All improvements made in the field of JavaScript garbage collection (generational/incremental/concurrent/parallel garbage collection) over the last few years are implementation improvements of this algorithm, but not improvements over the garbage collection algorithm itself nor its reduction of the definition of when “an object is not needed anymore”.</p>
+<h3 id="Cycles_are_not_a_problem_anymore">Cycles are not a problem anymore</h3><p>In the first above example, after the function call returns, the 2 objects are not referenced anymore by something reachable from the global object. Consequently, they will be found unreachable by the garbage collector.</p>
+<p>The same thing goes with the second example. Once the div and its handler are made unreachable from the roots, they can both be garbage-collected despite referencing each other.</p>
+<h3 id="Limitation:_objects_need_to_be_made_explicitly_unreachable">Limitation: objects need to be made explicitly unreachable</h3><p>Although this is marked as a limitation, it is one that is rarely reached in practice which is why no one usually cares that much about garbage collection.</p>
+<p>from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2014/09/18/javascript-read-notes/" itemprop="url">
+                  Javascript Read Notes
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2014-09-18T23:08:25+08:00" content="Sep 18 2014">
+              Sep 18 2014
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/09/18/javascript-read-notes/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/09/18/javascript-read-notes/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>(need to expand for details of every points)</p>
+<p><strong>0. Introduction</strong></p>
+<p>Overview of a web application languages:   </p>
+<ul>
+<li>HTML (HyperText Markup Language) to define the content of web pages  </li>
+<li>CSS (Cascading Style Sheets) to specify the layout of web pages  </li>
+<li>Javascript to program the behaviour of web pages</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>1. {} is an empty object with no properties.</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">book.contents = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p><strong>2. [] is an empty array with no elements.</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> empty = [];</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p><strong>3. An array with 2 elements. Each element is an object with two properties.</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> points = [</span><br><span class="line">     &#123;x:<span class="number">0</span>, y:<span class="number">0</span>&#125;,</span><br><span class="line">     &#123;x:<span class="number">1</span>, y:<span class="number">1</span>&#125;</span><br><span class="line">     ];</span><br></pre></td></tr></table></figure>
+<p><strong>4. the two strings are different</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"two"</span> == <span class="string">"three"</span></span><br></pre></td></tr></table></figure>
+<p>“tw” is alphabetically greater than “th”</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"two"</span> &amp;gt; <span class="string">"three"</span></span><br></pre></td></tr></table></figure>
+<p><strong>5. Define a method to compute distance between points</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">points.dist = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"> <span class="keyword">var</span> p1 = <span class="keyword">this</span>[<span class="number">0</span>]; <span class="comment">// First element of array we're invoked on</span></span><br><span class="line"> <span class="keyword">var</span> p2 = <span class="keyword">this</span>[<span class="number">1</span>]; <span class="comment">// Second element of the "this" object</span></span><br><span class="line"> <span class="keyword">var</span> a = p2.x-p1.x; <span class="comment">// Difference in X coordinates</span></span><br><span class="line"> <span class="keyword">var</span> b = p2.y-p1.y; <span class="comment">// Difference in Y coordinates</span></span><br><span class="line"> <span class="keyword">return</span> <span class="built_in">Math</span>.sqrt(a*a + <span class="comment">// The Pythagorean theorem</span></span><br><span class="line"> b*b); <span class="comment">// Math.sqrt() computes the square root</span></span><br><span class="line">&#125;;</span><br><span class="line">points.dist() <span class="comment">// 1.414: distance between our 2 points</span></span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>6.  JavaScript treats a line break as a semicolon if the next nonspace character cannot be interpreted as a continuation of the current statement.</p>
+<p>7. If a line break appears after any of these words (before any other tokens), ~JavaScript will always interpret that line break as a semicolon.<br>For example, if you write:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span></span><br><span class="line"><span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p>JS interpreter will regard it as : “return ; true;”.  More example: if you write:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x</span><br><span class="line">++</span><br><span class="line">y</span><br></pre></td></tr></table></figure>
+<p>then machine will execute “x; ++y”</p>
+<p><strong>8.  regular expression in JS</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx.match(“&amp;lt;pattern&amp;gt;”)</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>9. global property:<br>~NaN, undefined, infinity<br>global object:<br>Math, JSON, Window</p>
+<p>10. comparison: between objects using “===“ never equivalent because only the pointers are compared</p>
+<p>11. be aware that:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> + “xxx”</span><br></pre></td></tr></table></figure>
+<p>then “10” will be also regarded as a string   however,  not every “xx” will be regarded as string: “2” * “3” interpreter will transfer them to number.<br>also this property would be used while two different types of data are compared :</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“<span class="number">6</span>” == <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> == <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>interpreter will return true.</p>
+<p><strong>12. type conversion</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.toString(<span class="number">2</span>) <span class="comment">//binary  data.toString(8) //octal data.toString(16) //hex</span></span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>13.  number.toFixed(3) fix the float number with .number xxx.</p>
+<p>14. to echo an object primitive “something like:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.toString() <span class="comment">//==&amp;gt; [Object object]”</span></span><br></pre></td></tr></table></figure>
+<p>If you cannot find toString() method, try valueOf()</p>
+<p>15.  &gt;&gt; and &gt;&gt;&gt; ;  == and === ; != and !== ; what’s the difference?</p>
+<p>16. “typeof” return object type name. “instanceof [object]” used to judge whether it is the instance of this object. return : true/false</p>
+<p>17. eval(expression: local variables effect)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> geval = <span class="built_in">eval</span>;</span><br><span class="line"><span class="keyword">var</span> x = <span class="string">"global"</span>, y = <span class="string">"global"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> x = <span class="string">"local"</span>;</span><br><span class="line"><span class="built_in">eval</span>(<span class="string">"x += 'changed';"</span>); <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">g</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> y = <span class="string">"local"</span>;</span><br><span class="line">geval(<span class="string">"y += 'changed';"</span>); <span class="keyword">return</span> y;</span><br><span class="line"><span class="comment">// Using another name does a global eval</span></span><br><span class="line"><span class="comment">// Two global variables</span></span><br><span class="line"><span class="comment">// This function does a local eval</span></span><br><span class="line"><span class="comment">// Define a local variable</span></span><br><span class="line"><span class="comment">// Direct eval sets local variable // Return changed local variable</span></span><br><span class="line"><span class="comment">// This function does a global eval // A local variable</span></span><br><span class="line"><span class="comment">// Indirect eval sets global variable // Return unchanged local variable</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">debug(f() +<span class="string">" "</span>+ x); <span class="comment">// Local variable changed: prints "localchanged global":</span></span><br><span class="line"></span><br><span class="line">debug(g()+<span class="string">" "</span>+ y); <span class="comment">// Global variable changed: prints "local globalchang</span></span><br></pre></td></tr></table></figure>
+<p>18. delete [can be used to delete : data in array, certain property of an object or an entire object], and this expression will return true if succeed</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                <a class="post-title-link" href="/2014/09/14/kmp-knuth-morris-pratt/" itemprop="url">
+                  KMP (Knuth-Morris-Pratt)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2014-09-14T12:35:45+08:00" content="Sep 14 2014">
+              Sep 14 2014
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2014/09/14/kmp-knuth-morris-pratt/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/09/14/kmp-knuth-morris-pratt/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>#Problem</p>
+<p>This basic algorithm is basically used for matching a string pattern in another string. For example: If we want to match a string “abc” in a text says “abchd fbabc seee”. So in this situation how do we solve it?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> compareKMP(char * str1, char * str2, int * t)&#123;</span><br><span class="line">    int p1 = <span class="number">0</span>;</span><br><span class="line">    int p2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(p1 &amp;lt; <span class="number">31</span>)&#123;</span><br><span class="line">        <span class="comment">// length of compared sub-string</span></span><br><span class="line">        <span class="keyword">if</span> (str1[p1] != str2[p2])&#123;</span><br><span class="line">            <span class="keyword">if</span> (p2 == <span class="number">0</span> || p2 == <span class="number">1</span>) &#123; p2 = <span class="number">0</span>; p1++;&#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(p2 &amp;gt; <span class="number">1</span>) p2 = t[p2-<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            p1++; p2++;</span><br><span class="line">            <span class="comment">// p2 %= 7;</span></span><br><span class="line">            <span class="keyword">if</span>(p2 == Length)&#123;</span><br><span class="line">                p2 = <span class="number">0</span>;</span><br><span class="line">                printf(<span class="string">"Get it at %d\n"</span>, p1 - Length + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>#More</p>
+<p>This algorithm especially its partial match table is basic theory for other more complex algorithm like Aho-Corasick automation, which is an advanced multiple character-matching algorithm.</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+ </div>
+
+        
+
+        
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Lawrence Y. P. LIU" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Lawrence Y. P. LIU</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">Personal Blog Site</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">分類</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="menu-item-icon icon-next-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lawrence Y. P. LIU</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'laosanitygithubio';
+      var disqus_identifier = 'index.html';
+      var disqus_title = '';
+      var disqus_url = '';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+    </script>
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      isMobile() && FastClick.attach(document.body);
+
+      // Define Motion Sequence.
+      motionIntegrator
+        .add(motionMiddleWares.logo)
+        .add(motionMiddleWares.menu)
+        .add(motionMiddleWares.backToTop)
+        .add(motionMiddleWares.postList)
+        .add(motionMiddleWares.sidebar);
+
+      // Bootstrap Motion.
+      motionIntegrator.bootstrap();
+    });
+  </script>
+
+  
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
